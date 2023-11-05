@@ -1,0 +1,303 @@
+[
+    {
+      "room_number": 101,
+      "image": "https://i.ibb.co/Z28kqxQ/hotel-1.jpg",
+      "title": "Standard Room",
+      "price": 100,
+      "description": "A comfortable standard room for a relaxing stay.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "single"
+    },
+    {
+      "room_number": 102,
+      "image": "https://i.ibb.co/3vBXvgg/hotel-2.jpg",
+      "title": "Deluxe Room",
+      "price": 150,
+      "description": "A spacious deluxe room with a beautiful view.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 103,
+      "image": "https://i.ibb.co/d7ChPFF/hotel-3.jpg",
+      "title": "Suite",
+      "price": 250,
+      "description": "A luxurious suite for a truly special experience.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 104,
+      "image": "https://i.ibb.co/wQv5Wvr/hotel-4.jpg",
+      "title": "Economy Room",
+      "price": 80,
+      "description": "An affordable room for budget-conscious travelers.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "single"
+    },
+    {
+      "room_number": 105,
+      "image": "https://i.ibb.co/CBMJ3YT/hotel-5.jpg",
+      "title": "Family Suite",
+      "price": 300,
+      "description": "A spacious suite for families with children.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 106,
+      "image": "https://i.ibb.co/mTQXz8t/hotel-6.jpg",
+      "title": "Single Room",
+      "price": 70,
+      "description": "A cozy single room for solo travelers.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "single"
+    },
+    {
+      "room_number": 107,
+      "image": "https://i.ibb.co/zssc4sj/hotel-7.jpg",
+      "title": "Luxury Suite",
+      "price": 350,
+      "description": "An extravagant suite with all the amenities.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 108,
+      "image": "https://i.ibb.co/mvtqf3t/hotel-8.jpg",
+      "title": "Business Room",
+      "price": 120,
+      "description": "A functional room for business travelers.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 109,
+      "image": "https://i.ibb.co/9yWVnST/hotel-9.jpg",
+      "title": "Ocean View Room",
+      "price": 180,
+      "description": "A room with a stunning view of the ocean.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 110,
+      "image": "https://i.ibb.co/Xy7XMJ0/hotel-10.jpg",
+      "title": "Executive Suite",
+      "price": 280,
+      "description": "A luxurious suite for executives and VIPs.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 111,
+      "image": "https://i.ibb.co/SV3n7p5/hotel-11.jpg",
+      "title": "Cozy Retreat",
+      "price": 90,
+      "description": "A cozy retreat for a peaceful getaway.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "single"
+    },
+    {
+      "room_number": 112,
+      "image": "https://i.ibb.co/7S8Ps9c/hotel-12.jpg",
+      "title": "Mountain View Room",
+      "price": 160,
+      "description": "A room with a beautiful mountain view.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 113,
+      "image": "https://i.ibb.co/qdWbbpg/hotel-13.jpg",
+      "title": "Spa Suite",
+      "price": 320,
+      "description": "A suite with a private spa for relaxation.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 114,
+      "image": "https://i.ibb.co/txwdBtM/hotel-14.jpg",
+      "title": "Accessible Room",
+      "price": 110,
+      "description": "An accessible room for guests with special needs.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "single"
+    },
+    {
+      "room_number": 115,
+      "image": "https://i.ibb.co/3C0yq0k/hotel-15.jpg",
+      "title": "Honeymoon Suite",
+      "price": 300,
+      "description": "A romantic suite for newlyweds and couples.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 116,
+      "image": "https://i.ibb.co/FJQhcTr/hotel-16.jpg",
+      "title": "Budget Room",
+      "price": 70,
+      "description": "An economical room for budget-conscious travelers.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "single"
+    },
+    {
+      "room_number": 117,
+      "image": "https://i.ibb.co/mCQTdvr/hotel-17.jpg",
+      "title": "Garden View Room",
+      "price": 170,
+      "description": "A room with a serene garden view.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 118,
+      "image": "https://i.ibb.co/tDsBkVR/hotel-18.jpg",
+      "title": "Family Room",
+      "price": 200,
+      "description": "A spacious room for families and groups.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 119,
+      "image": "https://i.ibb.co/PzVw0DJ/hotel-19.jpg",
+      "title": "Penthouse Suite",
+      "price": 400,
+      "description": "A luxurious penthouse suite with stunning views.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 120,
+      "image": "https://i.ibb.co/qWRj7wQ/hotel-20.jpg",
+      "title": "Classic Room",
+      "price": 130,
+      "description": "A classic room with a touch of elegance.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 121,
+      "image": "https://i.ibb.co/TmNdCKy/hotel-21.jpg",
+      "title": "Junior Suite",
+      "price": 220,
+      "description": "A spacious suite for a comfortable stay.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 122,
+      "image": "https://i.ibb.co/7XXvGJM/hotel-22.jpg",
+      "title": "City View Room",
+      "price": 160,
+      "description": "A room with a beautiful view of the city.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 123,
+      "image": "https://i.ibb.co/t8cX7P2/hotel-23.jpg",
+      "title": "Executive Room",
+      "price": 180,
+      "description": "A room designed for executives and professionals.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 124,
+      "image": "https://i.ibb.co/4tjpHxj/hotel-24.jpg",
+      "title": "River View Room",
+      "price": 190,
+      "description": "A room with a breathtaking view of the river.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 125,
+      "image": "https://i.ibb.co/PZTXBPC/hotel-25.jpg",
+      "title": "Presidential Suite",
+      "price": 500,
+      "description": "A luxurious suite fit for a president.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 126,
+      "image": "https://i.ibb.co/KDWKqYs/hotel-26.jpg",
+      "title": "Historic Room",
+      "price": 140,
+      "description": "A room with historic charm and character.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 127,
+      "image": "https://i.ibb.co/mGrT3sh/hotel-27.jpg",
+      "title": "Studio Apartment",
+      "price": 270,
+      "description": "A spacious studio apartment with modern amenities.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 128,
+      "image": "https://i.ibb.co/dtkYL4m/hotel-28.jpg",
+      "title": "Lakeside Room",
+      "price": 200,
+      "description": "A room with a serene view of the lakeside.",
+      "balcony": true,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 129,
+      "image": "https://i.ibb.co/rtgBd0m/hotel-29.jpg",
+      "title": "Business Suite",
+      "price": 250,
+      "description": "A suite designed for business travelers.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    },
+    {
+      "room_number": 130,
+      "image": "https://i.ibb.co/nrktCDP/hotel-30.jpg",
+      "title": "Adjoining Rooms",
+      "price": 160,
+      "description": "Two rooms with an adjoining door for family and group stays.",
+      "balcony": false,
+      "wifi": true,
+      "bed": "double"
+    }
+  ]
+  

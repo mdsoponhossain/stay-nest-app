@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Alice Johnson",
+      "comment": "Exceptional service and comfortable rooms. I had a wonderful experience during my stay. Will definitely return.",
+      "ratings": 5,
+      "image": "alice_johnson.jpg"
+    },
+    {
+      "name": "John Smith",
+      "comment": "Great location, friendly staff, and delicious food. I highly recommend this hotel to anyone visiting the area.",
+      "ratings": 4,
+      "image": "john_smith.jpg"
+    },
+    {
+      "name": "Emily Davis",
+      "comment": "The rooms were clean and well-maintained. The hotel's amenities were fantastic. I had a fantastic stay.",
+      "ratings": 4.5,
+      "image": "emily_davis.jpg"
+    },
+    {
+      "name": "Michael Wilson",
+      "comment": "Outstanding experience! The staff went above and beyond to make my stay memorable. The food was exquisite.",
+      "ratings": 5,
+      "image": "michael_wilson.jpg"
+    },
+    {
+      "name": "Sarah Adams",
+      "comment": "I loved the beautiful view from my room. The staff was courteous, and the facilities were top-notch. Highly recommended.",
+      "ratings": 4.8,
+      "image": "sarah_adams.jpg"
+    },
+    {
+      "name": "David Turner",
+      "comment": "A very pleasant stay. Clean rooms, excellent service, and a great location. I'll be returning soon.",
+      "ratings": 4.2,
+      "image": "david_turner.jpg"
+    }
+  ]
+  
