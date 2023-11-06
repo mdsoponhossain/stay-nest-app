@@ -6,7 +6,9 @@ const NavBar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
         <li><NavLink to='/myBookings'>My Bookings</NavLink></li>
-       
+        <li><NavLink to='/login'>Login</NavLink></li>
+        <li><NavLink to='/signUp'>SignUp</NavLink></li>
+
     </>
     return (
         <div className="navbar bg-base-100 border-4">
@@ -21,16 +23,19 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-2xl font-bold text-[#09ad9b] ">StayNest.com</a>
-                
+
             </div>
 
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navItems}
                 </ul>
+                
             </div>
+
             <div className="navbar-end">
                 <a className="btn">Button</a>
+                
             </div>
 
         </div>
