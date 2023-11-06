@@ -1,11 +1,19 @@
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 
 const RoomDetail = () => {
     const { image, balcony, bed, price, title, description, wifi, room_number,roomSize,availability  } = useLoaderData();
-  
-
+    const {user} = useContext(AuthContext)
+    console.log({user: user.email})
+    
+    const HandleBooking =()=>{
+        const roomInfo = {image,price,title,roomSize,bookInfo:'booked',description};
+        console.log({roomInfo})
+        // fetch('http://localhost:5000/room-booking')
+    }
 
 
     return (
@@ -25,7 +33,7 @@ const RoomDetail = () => {
                     <p className="text-2xl text-gray-600 font-bold">{description}</p>
                     <div className="card-actions justify-center">
                         <Link to={-1}><button className="btn  text-white btn-lg bg-[#0cc4b0] hover:bg-[#09ad9b]">Go Back</button></Link>
-                        <button className="btn  text-white btn-lg bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button>
+                        <button onClick={HandleBooking} className="btn  text-white btn-lg bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button>
                     </div>
                 </div>
             </div>
