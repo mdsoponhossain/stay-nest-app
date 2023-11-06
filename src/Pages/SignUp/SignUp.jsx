@@ -53,7 +53,7 @@ const SignUp = () => {
                         <div className="form-control mt-6">
                             <button className="btn  text-white bg-[#0cc4b0] hover:bg-[#09ad9b]">Sign Up</button>
                             <label className="label">
-                                <span>New here? please <Link to='/login' className="text-xl text-[#09ad9b] pl-2">LogIn</Link></span>
+                                <span>Have an account? please <Link to='/login' className="text-xl text-[#09ad9b] pl-2">LogIn</Link></span>
                             </label>
                         </div>
                     </form>
