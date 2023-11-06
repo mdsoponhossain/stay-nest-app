@@ -3,7 +3,8 @@ import { useLoaderData } from "react-router-dom";
 
 
 const RoomDetail = () => {
-    const { image, balcony, bed, price, title, description, wifi, room_number } = useLoaderData();
+    const { image, balcony, bed, price, title, description, wifi, room_number,roomSize,availability  } = useLoaderData();
+  
 
 
 
@@ -16,6 +17,9 @@ const RoomDetail = () => {
                     <h2 className="card-title text-4xl text-gray-600 font-bold">{title}</h2>
                     <p className="text-2xl text-gray-600 font-bold">Price:${price}</p>
                     <p className="text-2xl text-gray-600 font-bold">Bed:{bed}</p>
+                    <p className="text-2xl text-gray-600 font-bold">Room Size:{roomSize}</p>
+                    <p className="text-2xl text-gray-600 font-bold">Availability:{availability ? 'Available' :  'Unavailble'}</p>
+
                     <p className="text-2xl text-gray-600 font-bold">Balcony Status:{balcony ? 'Ok' : 'False'}</p>
                     <p className="text-2xl text-gray-600 font-bold">WiFi Status:{wifi ? 'Ok' : 'False'}</p>
                     <p className="text-2xl text-gray-600 font-bold">{description}</p>

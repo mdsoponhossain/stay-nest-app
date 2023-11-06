@@ -21,7 +21,7 @@ import RoomDetail from "../Pages/RoomDetails/RoomDetail";
         {
           path:'/Rooms',
           element:<Rooms></Rooms>,
-          loader:()=>fetch('http://localhost:5000/rooms')
+          // loader:()=>fetch('http://localhost:5000/rooms')
         },
         {
           path:'/RoomDetails/:id',
