@@ -7,12 +7,20 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const RoomDetail = () => {
     const { image, balcony, bed, price, title, description, wifi, room_number,roomSize,availability  } = useLoaderData();
     const {user} = useContext(AuthContext)
-    console.log({user: user.email})
+    const person = user.email;
     
     const HandleBooking =()=>{
-        const roomInfo = {image,price,title,roomSize,bookInfo:'booked',description};
-        console.log({roomInfo})
-        // fetch('http://localhost:5000/room-booking')
+        const userBookingInfo = {image,price,title,roomSize,bookInfo:'booked',description,person,bed};
+        console.log({userBookingInfo})
+        fetch('http://localhost:5000/room-booking',{
+            method:'POST',
+            headers:{'content-type':'application/json'},
+            body:JSON.stringify(userBookingInfo)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+        })
     }
 
 

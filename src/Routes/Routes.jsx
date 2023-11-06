@@ -6,6 +6,7 @@ import Rooms from "../Pages/Rooms/Rooms";
 import RoomDetail from "../Pages/RoomDetails/RoomDetail";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "../SharedComponent/PrivateRoute";
     
    
   
@@ -27,7 +28,7 @@ import SignUp from "../Pages/SignUp/SignUp";
         },
         {
           path:'/RoomDetails/:id',
-          element:<RoomDetail></RoomDetail>,
+          element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
         },
         {
