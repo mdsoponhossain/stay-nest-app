@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 
@@ -23,7 +23,8 @@ const RoomDetail = () => {
                     <p className="text-2xl text-gray-600 font-bold">Balcony Status:{balcony ? 'Ok' : 'False'}</p>
                     <p className="text-2xl text-gray-600 font-bold">WiFi Status:{wifi ? 'Ok' : 'False'}</p>
                     <p className="text-2xl text-gray-600 font-bold">{description}</p>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-center">
+                        <Link to={-1}><button className="btn  text-white btn-lg bg-[#0cc4b0] hover:bg-[#09ad9b]">Go Back</button></Link>
                         <button className="btn  text-white btn-lg bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button>
                     </div>
                 </div>

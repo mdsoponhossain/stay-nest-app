@@ -9,11 +9,12 @@ const NavBar = () => {
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
         <li><NavLink to='/myBookings'>My Bookings</NavLink></li>
     </>
-        
-        
+
+
 
 
     const { user, handleLogOut } = useContext(AuthContext);
+    console.log(user)
     const handleUserLogOut = () => {
         handleLogOut()
             .then(() => {
@@ -47,7 +48,21 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-end">
-                {/* <a className="btn">Button</a> */}
+                <div className="mr-2">
+                    {
+                        user && <div className="block">
+                            {
+                                user?.photoURL && <img src={user?.photoURL} /> || <img className="rounded-3xl w-[50px] h-[50px]" src='https://i.ibb.co/K5Q1JQN/profile-1.jpg' />
+                            }
+                        </div>
+                    }
+                    <div>
+                        {
+                            user?.email && <span>{user?.email}</span>
+                        }
+                    </div>
+                </div>
+
                 {
                     user ? <><button onClick={handleUserLogOut} className="btn text-white btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]">Log Out</button></> : <><NavLink className="btn text-white btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]" to='/login'>Log In</NavLink></>
                 }

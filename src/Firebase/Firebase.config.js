@@ -6,12 +6,12 @@ import { getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDyfk0q0lyUOLU4yyoZBVD_PNpvhuuRoNw",
-  authDomain: "stay-nest.firebaseapp.com",
-  projectId: "stay-nest",
-  storageBucket: "stay-nest.appspot.com",
-  messagingSenderId: "968672603842",
-  appId: "1:968672603842:web:c4bde55a0a94ecbf8b155b"
+  apiKey: process.env.USER_apiKey,
+  authDomain: process.env.USER_authDomain,
+  projectId: process.env.USER_projectId,
+  storageBucket: process.env.USER_storageBucket,
+  messagingSenderId: process.env.USER_messagingSenderId,
+  appId: process.env.USER_appId,
 };
 
 // Initialize Firebase
