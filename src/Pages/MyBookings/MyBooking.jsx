@@ -1,13 +1,28 @@
+import { useEffect, useState } from "react";
 
 
 const MyBooking = ({booking}) => {
-    console.log(booking);
-    const {price ,image ,title,roomSize,bed} = booking ;
+    // console.log(booking);
+    const {price ,image ,title,roomSize,bed,_id} = booking ;
+    const [deleteId , setDeleteId] = useState();
+    const [bookInfo, setBookInfo] = useState([]);
+    console.log(1111,_id)
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/booking-delete/${deleteId}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+        })
+    },[deleteId])
+
     return (
         <tr>
             <th>
                 <label>
-                    <input type="checkbox" className="checkbox" />
+                    <span onClick={()=>setDeleteId(_id)} className="btn">X</span>
                 </label>
             </th>
             <td>
