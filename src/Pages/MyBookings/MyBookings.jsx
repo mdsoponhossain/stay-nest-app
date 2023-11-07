@@ -6,7 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const MyBookings = () => {
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
-  
+
     const userEmail = user.email;
     // console.log(userEmail)
     useEffect(() => {
@@ -19,18 +19,37 @@ const MyBookings = () => {
     }, [userEmail]);
 
 
-    const handleDelete = (deleteId) => {
-        console.log(3333, deleteId);
+    const handleDelete = (id) => {
+        console.log(3333, id);
+        
 
-        fetch(`http://localhost:5000/booking-delete/${deleteId}`, {
+        fetch(`http://localhost:5000/booking-delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                const remaining = bookings.filter((booking)=>booking._id !== deleteId)
+                const remaining = bookings.filter((booking) => booking._id !== id)
                 setBookings(remaining)
             })
+
+        //jjjjjjjjjjjjjj
+        const updateRoomInfo = { availability: true }
+
+        fetch(`http://localhost:5000/rooms-upadate/${id}`, {
+            updateRoomInfo,
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(updateRoomInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+            })
+
+
+
     }
 
     return (
@@ -82,7 +101,9 @@ const MyBookings = () => {
                                         <span className="badge badge-ghost badge-sm">{booking.roomSize}</span>
                                     </td>
                                     <td>{booking.bed}</td>
+
                                     <td>${booking.price}</td>
+
                                     <th>
                                         <button className="btn btn-ghost btn-xs">confirm</button>
                                     </th>
