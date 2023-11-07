@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
 import axios from "axios";
@@ -19,6 +19,19 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+
+    const handleGoogleLogin = ()=>{
+        setLoading(true);
+        const provider = new GoogleAuthProvider();
+        return signInWithPopup(auth,provider);
+
+
+    }
+
+
+
+
+
     const handleLogOut = () => {
         setLoading(true)
         return signOut(auth);
@@ -38,12 +51,12 @@ const AuthProvider = ({ children }) => {
                     })
             }
 
-            else {
-                axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
-                    .then(res => {
-                        console.log(222222222, res.data)
-                    })
-            }
+            // else {
+            //     axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
+            //         .then(res => {
+            //             console.log(222222222, res.data)
+            //         })
+            // }
 
 
 
@@ -61,7 +74,8 @@ const AuthProvider = ({ children }) => {
         handleLogIn,
         handleLogOut,
         user,
-        loading
+        loading,
+        handleGoogleLogin
 
     }
 

@@ -1,39 +1,61 @@
 import { useContext } from "react";
-import { Link, useLocation, useNavigate} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import {FaGoogle} from 'react-icons/fa'
 
 
 const Login = () => {
 
-    const {handleLogIn} = useContext(AuthContext);
+    const { handleLogIn, handleGoogleLogin } = useContext(AuthContext);
     const location = useLocation();
     console.log(location)
     // const navigation = useNavigate();
 
     const handleLogInFormSubmit = (e) => {
         e.preventDefault()
-        
+
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log( email, password);
-        handleLogIn(email,password)
-        .then(result=>{
-            console.log(result.user);
-            // navigation(location?.state ? location.state : '/')
+        console.log(email, password);
+        handleLogIn(email, password)
+            .then(result => {
+                console.log(result.user);
+                // navigation(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+
+    }
+
+    const logInWithGoogle =()=>{
+        handleGoogleLogin()
+        .then((result)=>{
+            console.log(result.user)
         })
-        .catch(error=>{
+        .catch((error)=>{
             console.log(error.message)
         })
-            
     }
 
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
 
-                <div className="card flex-shrink-0  w-[400px] h-[500px] shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0  w-[400px] h-fit shadow-2xl bg-base-100">
                     <h1 className="text-5xl font-bold text-center text-[#0cc4b0] pt-10">Login </h1>
                     <form onSubmit={handleLogInFormSubmit} className="card-body">
+                        <div className="w-full mb-1">
+                            <button onClick={logInWithGoogle} className=" w-full btn btn-outline"><FaGoogle className="text-2xl"></FaGoogle> Continue With Google</button>
+                        </div>
+
+                        <div className="w-full grid justify-center">
+                            
+                            <span className="text-xl inline-block font-bold text-gray-500">Or</span>
+                           
+                        </div>
+
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
