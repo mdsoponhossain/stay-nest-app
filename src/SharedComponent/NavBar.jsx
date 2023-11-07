@@ -7,14 +7,14 @@ const NavBar = () => {
     const navItems = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
-        <li><NavLink to='/myBookings'>My Bookings</NavLink></li>
+        <li><NavLink to='/my-Bookings'>My Bookings</NavLink></li>
     </>
 
 
 
 
     const { user, handleLogOut } = useContext(AuthContext);
-    console.log(user)
+    // console.log(user)
     const handleUserLogOut = () => {
         handleLogOut()
             .then(() => {

@@ -7,6 +7,7 @@ import RoomDetail from "../Pages/RoomDetails/RoomDetail";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "../SharedComponent/PrivateRoute";
+import MyBookings from "../Pages/MyBookings/MyBookings";
     
    
   
@@ -38,6 +39,10 @@ import PrivateRoute from "../SharedComponent/PrivateRoute";
         {
           path:'/signUp',
           element:<SignUp></SignUp>
+        },
+        {
+          path:'/my-bookings',
+          element:<PrivateRoute><MyBookings></MyBookings></PrivateRoute>
         }
       ]
     },
