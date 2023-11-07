@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
+import axios from "axios";
 
 
 export const AuthContext = createContext();
@@ -26,7 +27,14 @@ const AuthProvider = ({ children }) => {
         onAuthStateChanged(auth,(currentUser)=>{
             console.log('the user from the authProvider:', currentUser)
             setUser(currentUser);
-            setLoading(false)
+            setLoading(false);
+            const email = currentUser.email;
+            const userInfo = {email}
+            axios.post('http://localhost:5000/access-token',userInfo,{withCredentials:true})
+            .then(res=>{
+                console.log(11111,res.data)
+            })
+
         })
     },[])
 

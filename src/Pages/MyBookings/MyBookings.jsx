@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import axios from "axios";
 // import MyBooking from "./MyBooking";
 
 
@@ -10,12 +11,21 @@ const MyBookings = () => {
     const userEmail = user.email;
     // console.log(userEmail)
     useEffect(() => {
-        fetch(`http://localhost:5000/my-bookings/${userEmail}`)
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data)
-                setBookings(data)
-            })
+        // fetch(`http://localhost:5000/my-bookings/${userEmail}`{credentials:"include"})
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         // console.log(data)
+        //         setBookings(data)
+        //     })
+
+
+        axios.get(`http://localhost:5000/my-bookings/${userEmail}`,{withCredentials: true})
+        .then(res=>{
+            console.log(res.data)
+            setBookings(res.data)
+        })
+
+
     }, [userEmail]);
 
 
