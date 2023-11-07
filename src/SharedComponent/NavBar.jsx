@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import axios from "axios";
 
 
 const NavBar = () => {
@@ -16,9 +17,15 @@ const NavBar = () => {
     const { user, handleLogOut } = useContext(AuthContext);
     // console.log(user)
     const handleUserLogOut = () => {
+        const email = user.email
+        const userInfo = {email}
         handleLogOut()
             .then(() => {
-                console.log('user successfully log Out')
+                alert('user successfully log Out')
+                axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
+                    .then(res => {
+                        console.log(222222222, res.data)
+                    })
             })
             .catch(() => {
                 console.log('user log out failed')

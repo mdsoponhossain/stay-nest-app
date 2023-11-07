@@ -8,7 +8,7 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
-    const [loading, setLoading]= useState(true)
+    const [loading, setLoading] = useState(true)
     const handleSignUp = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -16,29 +16,47 @@ const AuthProvider = ({ children }) => {
 
     const handleLogIn = (email, password) => {
         setLoading(true)
-        return signInWithEmailAndPassword(auth,email,password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const handleLogOut =()=>{
+    const handleLogOut = () => {
         setLoading(true)
         return signOut(auth);
     }
-    useEffect(()=>{
-        onAuthStateChanged(auth,(currentUser)=>{
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             console.log('the user from the authProvider:', currentUser)
             setUser(currentUser);
             setLoading(false);
             const email = currentUser.email;
-            const userInfo = {email}
-            axios.post('http://localhost:5000/access-token',userInfo,{withCredentials:true})
-            .then(res=>{
-                console.log(11111,res.data)
-            })
+            const userInfo = { email }
+            if (currentUser) {
+
+                axios.post('http://localhost:5000/access-token', userInfo, { withCredentials: true })
+                    .then(res => {
+                        console.log(11111, res.data)
+                    })
+            }
+
+            else {
+                axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
+                    .then(res => {
+                        console.log(222222222, res.data)
+                    })
+            }
+
+
+
 
         })
-    },[])
 
-    const info = { 
+        return () => {
+            return unsubscribe();
+        }
+
+    }, [])
+
+    const info = {
         handleSignUp,
         handleLogIn,
         handleLogOut,

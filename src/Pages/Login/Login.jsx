@@ -8,7 +8,7 @@ const Login = () => {
     const {handleLogIn} = useContext(AuthContext);
     const location = useLocation();
     console.log(location)
-    const navigation = useNavigate();
+    // const navigation = useNavigate();
 
     const handleLogInFormSubmit = (e) => {
         e.preventDefault()
@@ -19,7 +19,7 @@ const Login = () => {
         handleLogIn(email,password)
         .then(result=>{
             console.log(result.user);
-            navigation(location?.state ? location.state : '/')
+            // navigation(location?.state ? location.state : '/')
         })
         .catch(error=>{
             console.log(error.message)
