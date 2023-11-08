@@ -10,6 +10,8 @@ import PrivateRoute from "../SharedComponent/PrivateRoute";
 import MyBookings from "../Pages/MyBookings/MyBookings";
 // import ClientReviews from "../Pages/Home/ClientReviews";
 import UserComment from "../Pages/UserComment/UserComment";
+import Gallery from "../Pages/Gallery/Gallery";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 
     
    
@@ -48,8 +50,20 @@ import UserComment from "../Pages/UserComment/UserComment";
           element:<PrivateRoute><MyBookings></MyBookings></PrivateRoute>
         },
         {
-          path:'/user-comment',
-          element:<UserComment></UserComment>
+          path:'/user-comment/:id',
+          element:<UserComment></UserComment>,
+          loader:({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+        },
+        {
+          path:'/gallery',
+          element:<Gallery></Gallery>,
+          loader:()=>fetch('http://localhost:5000/rooms')
+        },
+        {
+          path:'/about-us',
+          element:<AboutUs></AboutUs>,
+          loader:()=>fetch('http://localhost:5000/about-us')
+
         }
         
         
@@ -59,3 +73,4 @@ import UserComment from "../Pages/UserComment/UserComment";
   
 
 export default router;
+///

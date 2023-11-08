@@ -4,9 +4,9 @@ import { MdFoodBank } from 'react-icons/md'
 
 const FeaturedRoom = () => {
     return (
-        <div className="bg-base-200 h-[700px]">
+        <div className="bg-base-200 py-40 ">
                 <h3 className='text-center text-4xl text-gray-600 py-6 font-bold'>Room Features</h3>
-            <div className="w-3/5 grid grid-cols-2  items-center h-[500px]  border-4 mx-auto">
+            <div className="md:w-3/5 grid h-fit md:grid-cols-2   items-center w-full   border-4 mx-auto">
                 <div className="border-4 my-auto h-[400px] ">
                     <img className="h-full" src="https://i.ibb.co/3vBXvgg/hotel-2.jpg" alt="" />
                 </div>

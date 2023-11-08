@@ -5,9 +5,9 @@ const SpecialOffer = () => {
         <div className=" h-auto grid items-center py-20 bg-base-200">
             <h3 className="text-4xl mb-2 text-center text-gray-600  font-bold">Special Offers</h3>
 
-            <div className="hero-content gap-0 border-4   flex-col lg:flex-row w-3/5 mx-auto">
+            <div className="hero-content gap-0 border-4 w-full    /* flex-col */ lg:flex-row md:w-3/5 mx-auto">
                 <div className="border-4 h-56">
-                    <img className="h-full  border-white" src="https://i.ibb.co/3vBXvgg/hotel-2.jpg" />
+                    <img className="h-full w-full  border-white" src="https://i.ibb.co/3vBXvgg/hotel-2.jpg" />
                 </div>
                 <div className=" w-3/4 pl-5 h-56 text-gray-600 bg-white">
                     <h1 className="text-3xl font-bold">Luxury Room</h1>
@@ -18,7 +18,7 @@ const SpecialOffer = () => {
                 </div>
             </div>
 
-            <div className="hero-content gap-0 border-4   flex-col lg:flex-row w-3/5 mx-auto">
+            <div className="hero-content gap-0 border-4 w-full   /* flex-col */ lg:flex-row md:w-3/5 mx-auto">
 
                 <div className=" w-3/4 pl-5 h-56 text-gray-600 bg-white">
                     <h1 className="text-3xl font-bold">  Family Suit</h1>

@@ -8,7 +8,7 @@ const ClientReviews = () => {
 
             <div id="slide1" className="carousel-item relative w-full">
 
-                <div className='absolute  transform -translate-y-1/2  right-5 top-1/2 bg-gradient-to-r from-zinc-500 to-[rgba(21, 21, 21, 0.00)] h-full left-0 grid items-center '>
+                <div className='absolute h-fit  transform -translate-y-1/2  right-5 top-1/2 bg-gradient-to-r from-zinc-500 to-[rgba(21, 21, 21, 0.00)] md:h-full left-0 grid items-center '>
                     <div className=" grid grid-cols-1 lg:grid-cols-3 font-bold">
 
                         <div className='m-4 p-4  w-72 grid text-center bg-white bg-opacity-30'>
@@ -46,7 +46,7 @@ const ClientReviews = () => {
                         </div>
                     </div>
 
-                    <div className='absolute flex transform -translate-y-1/2 justify-center gap-5  left-6 right-6 mt-[40%]'>
+                    <div className='absolute  flex transform -translate-y-1/2 justify-center gap-5  left-6 right-6 mt-[40%]'>
                         <a href="#slide2" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>

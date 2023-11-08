@@ -1,25 +1,48 @@
 import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 
 
 const UserComment = () => {
-    const [rating ,setRaing] = useState();
+    const [rating, setRaing] = useState();
+    const {_id} = useLoaderData();
+    console.log(_id)
 
-    const hanldeRating =(e)=>{
-        const rating = e.target.value ;
+    const hanldeRating = (e) => {
+        const rating = e.target.value;
         console.log(rating)
         setRaing(rating)
     }
 
-    const feedbackFormHandle =(e)=>{
+    const feedbackFormHandle = (e) => {
         e.preventDefault();
-        const name = e.target.name.value ;
+        const name = e.target.name.value;
         const email = e.target.email.value;
         // const rating = e.target.rating.value; 
         const comment = e.target.comment.value;
-        const userFeedback = {name,email,comment};
-        userFeedback.rating =rating ;
-        console.log(userFeedback)
+        const userFeedback = { name, email, comment };
+        userFeedback.rating = rating;
+        console.log(userFeedback);
+        
+
+        const updateRoomInfo = { userFeedback}
+        fetch(`http://localhost:5000/client-review/${_id}`, {
+            updateRoomInfo,
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(updateRoomInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+            })
+
+
+
+
+
+
     }
 
     return (
