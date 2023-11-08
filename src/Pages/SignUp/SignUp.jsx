@@ -1,26 +1,35 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const SignUp = () => {
 
-    const {handleSignUp} = useContext(AuthContext)
+    const { handleSignUp } = useContext(AuthContext)
+    const location = useLocation();
+    const navigation = useNavigate();
 
-    const handleSignUpFormSubmit =(e)=>{
+    const handleSignUpFormSubmit = (e) => {
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
-        const password = e.target.password.value ;
-        console.log(name,email, password);
-        handleSignUp(email ,password)
-        .then(result =>{
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.log(error.message)
-        })
-        
+        const password = e.target.password.value;
+        console.log(name, email, password);
+        handleSignUp(email, password)
+            .then(result => {
+                console.log(result.user)
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Your SignUp is successfully done",
+                    icon: "success"
+                });
+                navigation(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+
     }
     return (
         <div className="hero min-h-screen bg-base-200">

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const axiosSecure = axios.create({ baseURL: 'http://localhost:5000' })
@@ -17,7 +18,12 @@ const useAxiosSecure = () => {
             if(error.response.status === 401 || error.response.status === 403){
                 handleLogOut()
                 .then(()=>{
-                    alert('user logout because no token ');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!",
+                        footer: '<a href="#">login again</a>'
+                    });
                     navigation('/login')
                 })
                 .catch(()=>{

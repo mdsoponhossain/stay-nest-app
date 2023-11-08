@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import {FaGoogle} from 'react-icons/fa'
+import { FaGoogle } from 'react-icons/fa'
+import Swal from "sweetalert2";
+
 
 
 const Login = () => {
@@ -9,7 +11,7 @@ const Login = () => {
     const { handleLogIn, handleGoogleLogin } = useContext(AuthContext);
     const location = useLocation();
     console.log(location)
-    // const navigation = useNavigate();
+    const navigation = useNavigate();
 
     const handleLogInFormSubmit = (e) => {
         e.preventDefault()
@@ -20,7 +22,12 @@ const Login = () => {
         handleLogIn(email, password)
             .then(result => {
                 console.log(result.user);
-                // navigation(location?.state ? location.state : '/')
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Your login is successfully done",
+                    icon: "success"
+                });
+                navigation(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error.message)
@@ -28,14 +35,20 @@ const Login = () => {
 
     }
 
-    const logInWithGoogle =()=>{
+    const logInWithGoogle = () => {
         handleGoogleLogin()
-        .then((result)=>{
-            console.log(result.user)
-        })
-        .catch((error)=>{
-            console.log(error.message)
-        })
+            .then((result) => {
+                console.log(result.user)
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Your login is successfully done",
+                    icon: "success"
+                });
+                navigation(location?.state ? location.state : '/')
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
     }
 
     return (
@@ -50,9 +63,9 @@ const Login = () => {
                         </div>
 
                         <div className="w-full grid justify-center">
-                            
+
                             <span className="text-xl inline-block font-bold text-gray-500">Or</span>
-                           
+
                         </div>
 
 

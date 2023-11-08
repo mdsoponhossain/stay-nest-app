@@ -1,9 +1,13 @@
+
 import { Link } from "react-router-dom";
+
 
 
 const Room = ({ room }) => {
     // console.log(room)
+    
     const { image, title, price, room_number, _id } = room;
+  
 
     return (
         <div>

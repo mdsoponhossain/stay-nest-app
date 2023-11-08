@@ -7,6 +7,7 @@ import axios from "axios";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+    const [updateRoom ,setUpdateRoom] = useState()
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true)
     const handleSignUp = (email, password) => {
@@ -75,7 +76,9 @@ const AuthProvider = ({ children }) => {
         handleLogOut,
         user,
         loading,
-        handleGoogleLogin
+        handleGoogleLogin,
+        setUpdateRoom,
+        updateRoom
 
     }
 

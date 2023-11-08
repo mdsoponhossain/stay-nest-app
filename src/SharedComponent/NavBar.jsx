@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const NavBar = () => {
@@ -9,6 +10,8 @@ const NavBar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
         <li><NavLink to='/my-Bookings'>My Bookings</NavLink></li>
+
+
     </>
 
 
@@ -18,10 +21,14 @@ const NavBar = () => {
     // console.log(user)
     const handleUserLogOut = () => {
         const email = user.email
-        const userInfo = {email}
+        const userInfo = { email }
         handleLogOut()
             .then(() => {
-                alert('user successfully log Out')
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Your Logout is successfully done",
+                    icon: "success"
+                });
                 axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
                     .then(res => {
                         console.log(222222222, res.data)
@@ -59,7 +66,7 @@ const NavBar = () => {
                     {
                         user && <div className="block">
                             {
-                                user?.photoURL && <img src={user?.photoURL} /> || <img className="rounded-3xl w-[50px] h-[50px]" src='https://i.ibb.co/K5Q1JQN/profile-1.jpg' />
+                                user?.photoURL && <img className="w-12 h-12 rounded-3xl" src={user?.photoURL} /> || <img className="rounded-3xl w-[50px] h-[50px]" src='https://i.ibb.co/K5Q1JQN/profile-1.jpg' />
                             }
                         </div>
                     }

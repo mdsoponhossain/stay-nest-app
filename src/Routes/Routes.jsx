@@ -8,6 +8,9 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "../SharedComponent/PrivateRoute";
 import MyBookings from "../Pages/MyBookings/MyBookings";
+// import ClientReviews from "../Pages/Home/ClientReviews";
+import UserComment from "../Pages/UserComment/UserComment";
+
     
    
   
@@ -43,7 +46,13 @@ import MyBookings from "../Pages/MyBookings/MyBookings";
         {
           path:'/my-bookings',
           element:<PrivateRoute><MyBookings></MyBookings></PrivateRoute>
+        },
+        {
+          path:'/user-comment',
+          element:<UserComment></UserComment>
         }
+        
+        
       ]
     },
   ]);

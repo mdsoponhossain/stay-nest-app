@@ -2,11 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import axios from "axios";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 // import MyBooking from "./MyBooking";
 
 
 const MyBookings = () => {
-    const { user } = useContext(AuthContext);
+    const { user,updateRoom } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
     const axiosSecure = useAxiosSecure();
 
@@ -49,7 +50,7 @@ const MyBookings = () => {
         //jjjjjjjjjjjjjj
         const updateRoomInfo = { availability: true }
 
-        fetch(`http://localhost:5000/rooms-upadate/${id}`, {
+        fetch(`http://localhost:5000/rooms-upadate/${updateRoom}`, {
             updateRoomInfo,
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
@@ -119,6 +120,9 @@ const MyBookings = () => {
 
                                     <th>
                                         <button className="btn btn-ghost btn-xs">confirm</button>
+                                    </th>
+                                    <th>
+                                        <Link to='/user-comment'><button className="btn btn-ghost btn-xs">Add Review</button></Link>
                                     </th>
                                 </tr>)
                             }
