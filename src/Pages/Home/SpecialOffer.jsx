@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const SpecialOffer = () => {
@@ -14,9 +15,10 @@ const SpecialOffer = () => {
                     <p className="font-semibold">Start From $249</p>
 
                     <p className="py-2 font-semibold">Book your stay on our hotel booking website and enjoy a <span className="text-2xl">5%</span> discount when you make your reservation online. Don't miss this opportunity to save on your next getaway!</p>
-                    <button className="btn text-white bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button>
+                    <Link to='/rooms'><button className="btn text-white bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button></Link>
                 </div>
             </div>
+
 
             <div className="hero-content gap-0 border-4 w-full bg-white   /* flex-col */ lg:flex-row md:w-3/5 mx-auto">
 
@@ -24,17 +26,17 @@ const SpecialOffer = () => {
                     <h1 className="text-3xl font-bold">  Family Suit</h1>
                     <p className="font-semibold"> Start From $279</p>
                     <p className="py-2 font-semibold"> Our Family Fun Getaway Package is designed to make your family's stay both memorable and affordable.Enjoy your <span className="text-2xl">10%</span> discount on the total booking amount.</p>
-                    <button className="btn  text-white bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button>
+                    <Link to='/rooms'><button className="btn text-white bg-[#0cc4b0] hover:bg-[#09ad9b]">Book Now</button></Link>
                 </div>
                 <div className="border-4 h-56">
                     <img className="h-full  border-white" src="https://i.ibb.co/d7ChPFF/hotel-3.jpg" />
                 </div>
             </div>
 
-          
- 
 
-  
+
+
+
 
 
         </div>
