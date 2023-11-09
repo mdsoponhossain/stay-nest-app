@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Room from "./Room";
 import { useEffect, useState } from "react";
 import { RxDoubleArrowRight,RxDoubleArrowLeft } from 'react-icons/rx';
+import Tittle from "../../SharedComponent/Tittle";
 
 
 const Rooms = () => {
@@ -13,7 +14,7 @@ const Rooms = () => {
     const [itemsPerPage ,setItemsPerPage] = useState(10);
     console.log(Rooms)
     useEffect(() => {
-        fetch(`http://localhost:5000/rooms?sortField=price&sortOrder=${sort}&currentPage=${currentPage}&itemsPerPage=${itemsPerPage}`)
+        fetch(`https://stay-nest-server.vercel.app/rooms?sortField=price&sortOrder=${sort}&currentPage=${currentPage}&itemsPerPage=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setRooms(data)
@@ -53,6 +54,7 @@ const Rooms = () => {
 
     return (
         <div>
+            <Tittle title='stay-nest/rooms'/>
             <div className="h-10 w-full">
                 <select onChange={handleSorting} className="bg-[#0cc4b0] text-white" >
                     <option value="1">Asending sort by price</option>

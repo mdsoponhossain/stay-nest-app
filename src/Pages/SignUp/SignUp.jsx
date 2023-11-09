@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import Tittle from "../../SharedComponent/Tittle";
 
 
 const SignUp = () => {
@@ -33,6 +34,7 @@ const SignUp = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Tittle  title='stay-nest/sign-up'/>
             <div className="hero-content flex-col ">
 
                 <div className="card flex-shrink-0  w-[400px] h-fit shadow-2xl bg-base-100">

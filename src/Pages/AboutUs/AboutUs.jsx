@@ -1,5 +1,6 @@
 import autoprefixer from "autoprefixer";
 import { useLoaderData } from "react-router-dom";
+import Tittle from "../../SharedComponent/Tittle";
 
 
 const AboutUs = () => {
@@ -7,6 +8,7 @@ const AboutUs = () => {
     console.log(aboutDataAll)
     return (
         <div className="p-3">
+            <Tittle  title='stay-nest/about-us'/>
             <div>
                 {
                     aboutDataAll.map(aboutData=><div className="my-5 p-2"  key={aboutData._id}> 

@@ -6,10 +6,13 @@ import Swal from "sweetalert2";
 
 
 const NavBar = () => {
+    const { user, handleLogOut } = useContext(AuthContext);
     const navItems = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
-        <li><NavLink to='/my-Bookings'>My Bookings</NavLink></li>
+        {
+            user && <li><NavLink to='/my-Bookings'>My Bookings</NavLink></li>
+        }
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
         <li><NavLink to='/about-us'>About Us</NavLink></li>
 
@@ -19,7 +22,7 @@ const NavBar = () => {
 
 
 
-    const { user, handleLogOut } = useContext(AuthContext);
+    
     // console.log(user)
     const handleUserLogOut = () => {
         const email = user.email
@@ -31,17 +34,35 @@ const NavBar = () => {
                     text: "Your Logout is successfully done",
                     icon: "success"
                 });
-                axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
+                axios.post('https://stay-nest-server.vercel.app/clear-token', userInfo, { withCredentials: true })
                     .then(res => {
                         console.log(222222222, res.data)
                     })
+
+
+                // fetch('https://stay-nest-server.vercel.app/clear-token',{
+                //     method:'POST',
+                //     headers:{'content-type':'application-json'},
+                //     body:JSON.stringify(userInfo)
+                    
+                    
+                // })
+                // .then(res=>res.json())
+                // .then(data=>{
+                //     console.log('navbar',data)
+                // })
+
+
+
+
+
             })
             .catch(() => {
                 console.log('user log out failed')
             })
     }
     return (
-        <div className="navbar bg-base-100 border-4">
+        <div className="navbar bg-base-100 ">
 
             <div className="navbar-start">
                 <div className="dropdown">

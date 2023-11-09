@@ -12,6 +12,7 @@ import MyBookings from "../Pages/MyBookings/MyBookings";
 import UserComment from "../Pages/UserComment/UserComment";
 import Gallery from "../Pages/Gallery/Gallery";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+import UpdateBooking from "../Pages/UpdateBooking/UpdateBooking";
 
     
    
@@ -30,12 +31,12 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
         {
           path:'/Rooms',
           element:<Rooms></Rooms>,
-          loader:()=>fetch('http://localhost:5000/roomsCount')
+          loader:()=>fetch('https://stay-nest-server.vercel.app/roomsCount')
         },
         {
           path:'/RoomDetails/:id',
           element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+          loader:({params})=>fetch(`https://stay-nest-server.vercel.app/rooms/${params.id}`)
         },
         {
           path:'/login',
@@ -52,18 +53,23 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
         {
           path:'/user-comment/:id',
           element:<UserComment></UserComment>,
-          loader:({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+          loader:({params})=>fetch(`https://stay-nest-server.vercel.app/rooms/${params.id}`)
         },
         {
           path:'/gallery',
           element:<Gallery></Gallery>,
-          loader:()=>fetch('http://localhost:5000/rooms')
+          loader:()=>fetch('https://stay-nest-server.vercel.app/rooms')
         },
         {
           path:'/about-us',
           element:<AboutUs></AboutUs>,
-          loader:()=>fetch('http://localhost:5000/about-us')
+          loader:()=>fetch('https://stay-nest-server.vercel.app/about-us')
 
+        },
+        {
+          path: '/update-date/:id',
+          element:<UpdateBooking></UpdateBooking>
+          
         }
         
         
@@ -73,4 +79,4 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
   
 
 export default router;
-///
+///  //:id

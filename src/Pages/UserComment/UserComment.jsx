@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import Tittle from "../../SharedComponent/Tittle";
 
 
 
 const UserComment = () => {
     const [rating, setRaing] = useState();
     const {_id} = useLoaderData();
+    // const {id} =useParams()
     console.log(_id)
 
     const hanldeRating = (e) => {
@@ -26,7 +28,7 @@ const UserComment = () => {
         
 
         const updateRoomInfo = { userFeedback}
-        fetch(`http://localhost:5000/client-review/${_id}`, {
+        fetch(`https://stay-nest-server.vercel.app/client-review/${_id}`, {
             updateRoomInfo,
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
@@ -47,6 +49,7 @@ const UserComment = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Tittle  title='stay-nest/client-review'/>
             <div className="hero-content flex-col ">
 
                 <div className="card flex-shrink-0  w-[400px] h-fit shadow-2xl bg-base-100">

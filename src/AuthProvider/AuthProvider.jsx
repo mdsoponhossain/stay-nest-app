@@ -46,29 +46,29 @@ const AuthProvider = ({ children }) => {
             const userInfo = { email }
             if (currentUser) {
 
-                axios.post('http://localhost:5000/access-token', userInfo, { withCredentials: true })
+                axios.post('https://stay-nest-server.vercel.app/access-token', userInfo, { withCredentials: true })
                     .then(res => {
                         console.log(11111, res.data)
                     })
-            }
-
-            // else {
-            //     axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
-            //         .then(res => {
-            //             console.log(222222222, res.data)
-            //         })
-            // }
 
 
 
+                }
 
-        })
+            })
+
+
+           
+
 
         return () => {
             return unsubscribe();
         }
 
     }, [])
+
+
+
 
     const info = {
         handleSignUp,

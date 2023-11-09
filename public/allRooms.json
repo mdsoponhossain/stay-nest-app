@@ -9,7 +9,8 @@
     "roomSize": "200 sq. ft",
     "availability": true,
     "wifi": true,
-    "bed": "single"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 102,
@@ -21,7 +22,8 @@
     "description": "Experience a delightful stay in our spacious single room with a breathtaking ocean view. This room is tailored for solo travelers and offers a comfortable seating area, modern amenities, and a private bathroom. In the evening, let the soothing sounds of the ocean waves and the mesmerizing view of the endless horizon help you unwind. Whether you're here for business or leisure, this room provides a tranquil retreat to relax after a busy day of exploring the city.",
     "balcony": true,
     "wifi": true,
-    "bed": "single"
+    "seat": 2,
+    "reviews":[]
   },
   {
     "room_number": 103,
@@ -30,10 +32,11 @@
     "price": 250,
     "roomSize": "350 sq. ft",
     "availability": true,
-    "description": "Relax in our deluxe double room with a charming garden view. This room offers a peaceful escape from the city's hustle and bustle, featuring a comfortable double bed, a private bathroom, and all the necessary amenities. Wake up to the refreshing sight of the garden view, and stay connected with our complimentary Wi-Fi. With ample space, it's perfect for couples or those seeking a comfortable retreat.",
+    "description": "Relax in our deluxe double room with a charming garden view. This room offers a peaceful escape from the city's hustle and bustle, featuring a comfortable double seat, a private bathroom, and all the necessary amenities. Wake up to the refreshing sight of the garden view, and stay connected with our complimentary Wi-Fi. With ample space, it's perfect for couples or those seeking a comfortable retreat.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 104,
@@ -45,7 +48,8 @@
     "description": "Discover the perfect haven for budget-conscious travelers in our cozy and affordable hotel room. Our thoughtfully designed space offers a comfortable and relaxing environment for your stay. You'll enjoy a restful night's sleep in the inviting and well-appointed accommodations. With modern amenities and a convenient location, your stay will be both pleasant and economical. Experience the best of hospitality without breaking the bank in our affordable hotel room.",
     "balcony": false,
     "wifi": true,
-    "bed": "single"
+    "seat": 5,
+    "reviews":[]
   },
   {
     "room_number": 105,
@@ -57,7 +61,8 @@
     "description": "Indulge in a spacious and welcoming suite, specially designed for family package. Our suite offers ample room to accommodate all your loved ones, ensuring a comfortable and enjoyable stay. The family-friendly ambiance and well-appointed amenities will make your time together truly memorable. Create lasting memories as you relax in the generous space, providing privacy and convenience for both parents and kids. Elevate your family vacation experience in our inviting suite, perfect for a harmonious and joy-filled stay.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 106,
@@ -69,7 +74,8 @@
     "description": "Embrace the serenity of our cozy single room, thoughtfully crafted for solo travelers seeking comfort and tranquility. This intimate space provides the perfect sanctuary for those embarking on a journey of self-discovery. You'll find all the essential amenities and a warm ambiance to make your stay as pleasant as it is peaceful. Experience the convenience and affordability of a well-appointed solo traveler's haven. Whether for business or leisure, this room is your private retreat in the heart of the city.",
     "balcony": false,
     "wifi": true,
-    "bed": "single"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 107,
@@ -81,7 +87,8 @@
     "description": "Step into opulence and luxury in our extravagant suite, where you'll be pampered with an array of top-notch amenities. This lavish accommodation boasts spacious interiors, ensuring a truly indulgent experience. Immerse yourself in comfort with features like a private Jacuzzi, a fully stocked minibar, and a panoramic view of the city. From the moment you arrive, you'll be enveloped in a world of unparalleled sophistication and convenience. This suite redefines the meaning of luxury, making it an ideal choice for those who seek the finest in hotel accommodations.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 108,
@@ -90,10 +97,11 @@
     "price": 120,
     "roomSize": "180 sq. ft",
     "availability": true,
-    "description": "Experience the ultimate in efficiency and functionality with our thoughtfully designed room tailored to meet the needs of business travelers. This space is meticulously crafted to provide a quiet, productive environment, equipped with a spacious work desk, high-speed Wi-Fi, and all the essential amenities you require to stay focused and connected. Rest easy in a comfortable bed after a day of meetings and work, and wake up refreshed and ready to take on your day. Our strategic location ensures easy access to corporate hubs and essential services. Elevate your business trip experience in this practical and well-appointed room, making it your ideal home away from home.",
+    "description": "Experience the ultimate in efficiency and functionality with our thoughtfully designed room tailored to meet the needs of business travelers. This space is meticulously crafted to provide a quiet, productive environment, equipped with a spacious work desk, high-speed Wi-Fi, and all the essential amenities you require to stay focused and connected. Rest easy in a comfortable seat after a day of meetings and work, and wake up refreshed and ready to take on your day. Our strategic location ensures easy access to corporate hubs and essential services. Elevate your business trip experience in this practical and well-appointed room, making it your ideal home away from home.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 109,
@@ -105,7 +113,8 @@
     "description":"Indulge in a spacious and welcoming suite, specially designed for family package. Our suite offers ample room to accommodate all your loved ones, ensuring a comfortable and enjoyable stay. The family-friendly ambiance and well-appointed amenities will make your time together truly memorable. Create lasting memories as you relax in the generous space, providing privacy and convenience for both parents and kids. Elevate your family vacation experience in our inviting suite, perfect for a harmonious and joy-filled stay." ,
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 110,
@@ -117,7 +126,8 @@
     "description": "Experience the epitome of luxury in our executive and VIP suite. This opulent retreat is designed exclusively for executives and VIPs, offering a harmonious blend of grandeur and comfort. With spacious living areas, a dedicated workspace, and the added luxury of a personal butler service, this suite ensures absolute privacy and indulgence. Whether for business or leisure, this suite is the perfect choice for those who expect nothing but the best. Discover the extraordinary in our executive and VIP suite, where your every need is met with impeccable service and top-tier amenities.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 111,
@@ -129,7 +139,8 @@
     "description": "Find solace in our charming hotel room, a cozy retreat perfect for a peaceful getaway. Nestled in a tranquil setting, this space offers a serene escape from the hustle and bustle of daily life. You'll be enveloped in a warm and inviting ambiance that's ideal for relaxation and rejuvenation. Whether you're seeking a romantic weekend or a quiet respite, this room provides all the comfort and tranquility you need for a truly tranquil stay. Immerse yourself in the peaceful atmosphere of our retreat and leave your worries behind as you embark on a serene escape.",
     "balcony": false,
     "wifi": true,
-    "bed": "single"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 112,
@@ -141,7 +152,8 @@
     "description": "Experience the pinnacle of relaxation in our luxurious suite, boasting a private spa for your ultimate comfort and rejuvenation. This opulent haven offers an exclusive retreat, where you can unwind in your very own sanctuary, featuring a spa tub, sauna, and other indulgent amenities. Whether you seek a romantic escape or a well-deserved pampering session, this suite ensures the utmost in comfort and serenity. Immerse yourself in the lap of luxury and relaxation in our spa suite, where you can soothe your senses and revitalize your spirit in the serenity of your private oasis.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 113,
@@ -153,7 +165,8 @@
     "description": "A suite with a private spa for relaxation.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 114,
@@ -165,7 +178,8 @@
     "description": "Experience pure luxury and relaxation in our exquisite suite, featuring a private spa for your ultimate comfort and tranquility. This opulent haven provides a serene escape, allowing you to unwind in the complete privacy of your own personal oasis. The suite is thoughtfully equipped with a spa tub, sauna, and other rejuvenating amenities, ensuring an unforgettable stay. Whether you're seeking a romantic getaway or a well-deserved pampering retreat, our spa suite offers the perfect setting for your relaxation and rejuvenation. Discover the pinnacle of comfort and indulgence in our spa suite, where you can rejuvenate your body and soul in the seclusion and opulence of your private sanctuary.",
     "balcony": false,
     "wifi": true,
-    "bed": "single"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 115,
@@ -177,7 +191,8 @@
     "description": "Embrace the romance in our enchanting suite, thoughtfully designed for newlyweds and couples seeking an unforgettable getaway. This intimate retreat sets the stage for a perfect romantic escape, offering a cozy and inviting ambiance that sparks love and connection. From the moment you step inside, you'll be greeted by the warm, romantic atmosphere, perfect for creating lasting memories. Whether you're celebrating a special occasion or simply looking to rekindle your love, our suite ensures an amorous and memorable experience. Immerse yourselves in the romance of our suite, where love blossoms and cherished moments are born.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 116,
@@ -189,7 +204,8 @@
     "description": "In our economical room, budget-conscious travelers will find an excellent option. This well-appointed space offers all the essential amenities you need for a comfortable stay without breaking the bank. You'll find a welcoming and efficient atmosphere, ensuring a pleasant and affordable visit. Whether you're here for business or leisure, our room provides a cost-effective solution that doesn't compromise on quality. Enjoy the convenience and savings of our economical room, making it the ideal choice for those who appreciate value and affordability.",
     "balcony": false,
     "wifi": true,
-    "bed": "single"
+    "seat": 2,
+    "reviews":[]
   },
   {
     "room_number": 117,
@@ -201,7 +217,8 @@
     "description":"Nestled amidst the pristine beauty of the mountains, our hotel offers breathtaking mountain views that will leave you in awe. Wake up to the serene panorama of towering peaks and lush green valleys, creating a picture-perfect backdrop for your stay. Whether you're an outdoor enthusiast or simply seeking a tranquil escape, our mountain-view accommodations provide the ideal setting. Immerse yourself in the natural splendor and tranquility of the mountains, making your stay truly extraordinary. Experience the majestic charm of our mountain-view hotel, where every moment is a scenic masterpiece.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 118,
@@ -213,7 +230,8 @@
     "description": "Welcome to our spacious room, thoughtfully designed to accommodate families and groups comfortably. With ample space and well-appointed furnishings, this room offers a cozy and inviting environment for a memorable stay. Whether you're traveling with loved ones or a group of friends, you'll find the room to be both accommodating and convenient. It provides the perfect setting to create cherished memories and bond with your companions. Experience the warmth and togetherness of our spacious room, making it the ideal choice for families and groups looking for a relaxing and enjoyable stay.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 119,
@@ -225,7 +243,8 @@
     "description": "Experience the pinnacle of luxury in our stunning penthouse suite, offering breathtaking views from its elevated vantage point. This opulent retreat features spacious accommodations and top-tier amenities, ensuring an unforgettable stay. Whether you're celebrating a special occasion or simply seeking the finest in accommodations, our penthouse suite promises an exceptional experience. Enjoy the height of sophistication and opulence with breathtaking views in our penthouse suite, a perfect choice for those who appreciate the finer things in life.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 5,
+    "reviews":[]
   },
   {
     "room_number": 120,
@@ -237,7 +256,8 @@
     "description": "Step into our classic room, where timeless charm meets modern elegance. This inviting space is designed to provide you with a comfortable and stylish stay. With its tasteful decor and attention to detail, you'll find a touch of sophistication that adds to the overall ambiance. Whether you're here for business or leisure, our classic room offers a warm and welcoming environment for a memorable stay. Experience the perfect blend of classic charm and contemporary comfort in our elegant room.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 5,
+    "reviews":[]
   },
   {
     "room_number": 121,
@@ -249,7 +269,8 @@
     "description": "Enter our spacious suite, designed to offer ample room for a comfortable and enjoyable stay. This inviting space provides all the necessary amenities and furnishings to ensure your visit is relaxing and accommodating. Whether you're traveling for business or leisure, you'll find the room to be a haven of comfort and convenience. Experience the luxury of extra space in our roomy suite, making your stay truly enjoyable and memorable. It's the perfect choice for those who appreciate room to relax and unwind.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 122,
@@ -261,7 +282,8 @@
     "description": "Enjoy a room with a captivating view of the city, where the skyline stretches out before you in all its glory. This picturesque vista sets the stage for a memorable stay, whether you're sipping your morning coffee or admiring the city lights at night. Our room offers the perfect vantage point to take in the beauty and energy of the urban landscape. Immerse yourself in the dynamic atmosphere and the ever-changing panorama, making your stay both exciting and unforgettable. Experience the city from a new perspective in our room, where each moment offers a stunning view to behold.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 4,
+    "reviews":[]
   },
   {
     "room_number": 123,
@@ -273,7 +295,8 @@
     "description": "Our room is purposefully crafted with executives and professionals in mind, offering a refined and well-organized environment that suits your business needs. You'll find a dedicated workspace with high-speed internet access, providing the ideal setup for productive work sessions. After a long day of meetings or business activities, you can relax in comfort and style, ensuring a restful and rejuvenating stay. Our executive room is the perfect choice for those who appreciate a balance of work and relaxation in an upscale atmosphere. Experience a seamless blend of functionality and luxury, designed exclusively for executives and professionals like you.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 124,
@@ -285,7 +308,8 @@
     "description": "Step into a room that exudes historic charm and character, where the past comes to life in a delightful ambiance. This space is a perfect blend of modern comfort and timeless elegance, providing a unique and memorable stay. The room is adorned with historic elements that add a touch of nostalgia and make your visit truly special. Whether you're a history enthusiast or simply appreciate a stay with a unique personality, our room offers a one-of-a-kind experience. Immerse yourself in the enchanting atmosphere of our historically charming room, where every corner tells a story and every moment is a journey through time.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 125,
@@ -297,7 +321,8 @@
     "description": "Unwind in our luxurious suite, designed to cater to the needs of the discerning traveler. This opulent space offers a harmonious blend of comfort and elegance, ensuring a truly indulgent experience. Whether you're embarking on a leisurely journey or a demanding business trip, you'll find a spacious and well-appointed environment that meets your expectations. Our suite is the epitome of luxury, providing a perfect sanctuary for relaxation and rejuvenation after a day of exploration. Experience the finest in hospitality and comfort in our suite, tailored to exceed the expectations of every traveler.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 6,
+    "reviews":[]
   },
   {
     "room_number": 126,
@@ -309,7 +334,8 @@
     "description": "Step into a room brimming with historic charm and character, where every nook tells a story of days gone by. This inviting space is adorned with period furnishings and decor that harken back to a bygone era, creating a unique and enchanting ambiance. Whether you're a history enthusiast or simply seeking an exceptional stay, our room provides a journey through time and an unforgettable experience. Immerse yourself in the rich atmosphere and vintage details, making your stay a delightful and memorable one. Experience the allure of history in our room, where every moment is infused with the charm and character of days long past.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 127,
@@ -321,7 +347,8 @@
     "description": "Step into our spacious studio apartment, thoughtfully designed to provide ample room and modern amenities for a comfortable and convenient stay. This inviting space offers a well-organized and stylish environment, ideal for both leisure and business travelers. With contemporary furnishings and top-notch features, you'll find everything you need for a delightful and hassle-free experience. Whether you're here for a short stay or an extended visit, our studio apartment ensures your comfort and convenience. Experience the perfect blend of space and modernity in our studio apartment, making your stay a pleasant and memorable one.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 128,
@@ -333,7 +360,8 @@
     "description": "Enjoy a room with a tranquil view of the picturesque gardenside, where nature's beauty unfolds before your eyes. This serene vista creates a peaceful and rejuvenating ambiance, perfect for a relaxing stay. Whether you're sipping your morning coffee or unwinding in the afternoon, our room offers the perfect setting to connect with nature. Immerse yourself in the natural beauty and serenity of the gardenside, making your stay both soothing and memorable. Experience the charm of the outdoors from the comfort of your room, where every moment offers a glimpse into the beauty of the gardenside.",
     "balcony": true,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 129,
@@ -345,7 +373,8 @@
     "description": "Welcome to our well-appointed suite, meticulously designed with the needs of business travelers in mind. This space offers a perfect balance of functionality and comfort, featuring a dedicated workspace, high-speed internet access, and all the amenities essential for a productive stay. Whether you're here for meetings or to unwind after a busy workday, our suite ensures a professional and sophisticated experience. Elevate your business trip with the amenities and ambiance tailored to cater to the discerning needs of business travelers in our suite. Experience the ideal blend of work and relaxation in our executive suite, ensuring a comfortable and efficient stay.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 3,
+    "reviews":[]
   },
   {
     "room_number": 130,
@@ -357,6 +386,7 @@
     "description": "Discover the convenience of two rooms with an adjoining door, perfect for family and group stays. This thoughtful setup allows for a seamless connection between the two spaces, providing both privacy and togetherness when needed. Whether you're traveling with your family or a group of friends, this arrangement offers the ideal solution for a harmonious and enjoyable stay. You can easily move between rooms, creating a shared yet personal experience that caters to everyone's needs. Experience the comfort and versatility of our adjoining rooms, making your family or group stay both convenient and memorable.",
     "balcony": false,
     "wifi": true,
-    "bed": "double"
+    "seat": 6,
+    "reviews":[]
   }
 ]

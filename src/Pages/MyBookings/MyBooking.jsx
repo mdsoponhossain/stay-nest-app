@@ -9,7 +9,7 @@ const MyBooking = ({booking}) => {
     console.log(1111,_id)
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/booking-delete/${deleteId}`,{
+        fetch(`https://stay-nest-server.vercel.app/booking-delete/${deleteId}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

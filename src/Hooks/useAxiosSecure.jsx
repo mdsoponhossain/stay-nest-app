@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const axiosSecure = axios.create({ baseURL: 'http://localhost:5000' })
+const axiosSecure = axios.create({ baseURL: 'https://stay-nest-server.vercel.app' })
+
 
 const useAxiosSecure = () => {
     const {handleLogOut} = useContext(AuthContext);
@@ -14,7 +15,7 @@ const useAxiosSecure = () => {
         return response;
     },
     (error) => {
-            console.log(121212, error.response.status);
+            // console.log(121212, error.response.status);
             if(error.response.status === 401 || error.response.status === 403){
                 handleLogOut()
                 .then(()=>{
@@ -27,7 +28,7 @@ const useAxiosSecure = () => {
                     navigation('/login')
                 })
                 .catch(()=>{
-                    console.log('log out faaild')
+                    
                 })
             }
         }
