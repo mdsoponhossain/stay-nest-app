@@ -9,7 +9,7 @@ const ClientReviews = () => {
             <div id="slide1" className="carousel-item relative w-full">
 
                 <div className='absolute h-fit  transform -translate-y-1/2  right-5 top-1/2 bg-gradient-to-r from-zinc-500 to-[rgba(21, 21, 21, 0.00)] md:h-full left-0 grid items-center '>
-                    <div className=" grid  grid-cols-3 font-bold">
+                    <div className=" grid grid-cols-1 lg:grid-cols-3 font-bold">
 
                         <div className='m-4 p-4  w-72 grid text-center bg-white bg-opacity-30'>
                             <div className="grid justify-center ">
@@ -35,14 +35,14 @@ const ClientReviews = () => {
                         </div>
                         <div className='p-4 w-72 grid text-center  bg-white bg-opacity-30'>
                             <div className="grid justify-center">
-                                <img className="h-14 w-14 inline-block rounded-full" src="https://i.ibb.co/GT95pq8/client-1.jpg" alt="" />
+                                <img className="h-14 w-14 inline-block rounded-full" src="https://i.ibb.co/y4XGH1p/download.jpg" alt="" />
                             </div>
-                            <p className="text-xl font-serif font-bold">Alice Johnson</p>
+                            <p className="text-xl font-serif font-bold">Emily Davis</p>
                             <div className='flex items-center justify-center '>
-                                <h3 className=' font-serif font-bold'>Ratings:4.5 </h3>
+                                <h3 className=' font-serif font-bold'>Ratings:4.0 </h3>
                                 <p><FaStar></FaStar></p>
                             </div>
-                            <p className='text-md font-serif font-semibold'>Exceptional service and comfortable rooms. I had a wonderful  experience during my stay. Will definitely return.</p>
+                            <p className='text-md font-serif font-semibold'>The rooms were clean and well-maintained. The hotel's amenities were fantastic. I had a fantastic stay</p>
                         </div>
                     </div>
 
@@ -59,14 +59,14 @@ const ClientReviews = () => {
 
                         <div className='p-4 w-72 grid text-center  bg-white bg-opacity-30'>
                             <div className="grid justify-center">
-                                <img className="h-14 w-14 inline-block rounded-full" src="https://i.ibb.co/GT95pq8/client-1.jpg" alt="" />
+                                <img className="h-14 w-14 inline-block rounded-full" src="https://i.ibb.co/6Wm0YDj/download-1.jpg" alt="" />
                             </div>
-                            <p className="text-xl font-serif font-bold">Alice Johnson</p>
+                            <p className="text-xl font-serif font-bold">Michael Wilson</p>
                             <div className='flex items-center justify-center '>
                                 <h3 className=' font-serif font-bold'>Ratings:4.5 </h3>
                                 <p><FaStar></FaStar></p>
                             </div>
-                            <p className='text-md font-serif font-semibold'>Exceptional service and comfortable rooms. I had a wonderful  experience during my stay. Will definitely return.</p>
+                            <p className='text-md font-serif font-semibold'>Outstanding experience! The staff went above and beyond to make my stay memorable. The food was exquisite.</p>
                         </div>
                         <div className='p-4 w-72 grid text-center  bg-white bg-opacity-30'>
                             <div className="grid justify-center">

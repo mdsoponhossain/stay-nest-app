@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 
 
+
 const Banner = () => {
     return (
         <div className="hero h-[500px]  " style={{ backgroundImage: 'url(https://i.ibb.co/m52hTyW/hotel-1.jpg)' }}>
             <div className="hero-overlay bg-black bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-5xl ">
-                    <h3 className='text-4xl font-serif font-bold my-3'>StayNest.com</h3>
-                    <p className='text-md my-3 font-serif font-semibold'>Your Simplified Hotel Booking Solution. Find, compare,<br /> and secure the ideal accommodations for your travel needs.<br /> Experience convenience, comfort, and worry-free bookings <br /> with us, so you can focus on what truly matters - your journey."</p>
-                    <Link to='/rooms'><button className="btn  text-white bg-[#0cc4b0] hover:bg-[#09ad9b] border-none my-4">Get Started</button></Link>
+                    <h3 className='text-4xl font-serif font-bold my-3' >StayNest.com</h3>
+                    <p className='text-md my-3 font-serif font-semibold'  >Your Simplified Hotel Booking Solution. Find, compare,<br /> and secure the ideal accommodations for your travel needs.<br /> Experience convenience, comfort, and worry-free bookings <br /> with us, so you can focus on what truly matters - your journey."</p>
+                    <Link to='/rooms'><button className="btn  text-white bg-[#0cc4b0] hover:bg-[#09ad9b] border-none my-4"  >Get Started</button></Link>
                 </div>
             </div>
         </div>
