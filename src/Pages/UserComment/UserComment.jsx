@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Tittle from "../../SharedComponent/Tittle";
+import { useNavigate } from "react-router-dom/dist";
+import Swal from "sweetalert2";
 
 
 
 const UserComment = () => {
     const [rating, setRaing] = useState();
     const {_id} = useLoaderData();
-    // const {id} =useParams()
-    console.log(_id)
+    const navigation = useNavigate()
+   
 
     const hanldeRating = (e) => {
         const rating = e.target.value;
@@ -36,7 +38,14 @@ const UserComment = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if(data.modifiedCount){
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "Your review is successfully added",
+                        icon: "success"
+                    });
+                    return navigation('/my-bookings')
+                }
 
             })
 
