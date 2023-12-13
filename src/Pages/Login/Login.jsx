@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { FaGoogle } from 'react-icons/fa'
 import Swal from "sweetalert2";
 import Tittle from "../../SharedComponent/Tittle";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 
 
 const Login = () => {
 
-    const { handleLogIn, handleGoogleLogin } = useContext(AuthContext);
+    const { handleLogIn} = useContext(AuthContext);
     const location = useLocation();
     console.log(location)
     const navigation = useNavigate();
@@ -36,24 +36,10 @@ const Login = () => {
 
     }
 
-    const logInWithGoogle = () => {
-        handleGoogleLogin()
-            .then((result) => {
-                console.log(result.user)
-                Swal.fire({
-                    title: "Good job!",
-                    text: "Your login is successfully done",
-                    icon: "success"
-                });
-                navigation(location?.state ? location.state : '/')
-            })
-            .catch((error) => {
-                console.log(error.message)
-            })
-    }
+ 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen  dark:bg-black dark:text-slate-300  bg-base-200">
             <Tittle  title='stay-nest/login'/>
             <div className="hero-content flex-col ">
 
@@ -61,7 +47,8 @@ const Login = () => {
                     <h1 className="text-5xl font-bold text-center text-[#0cc4b0] pt-10">Login </h1>
                     <form onSubmit={handleLogInFormSubmit} className="card-body">
                         <div className="w-full mb-1">
-                            <button onClick={logInWithGoogle} className=" w-full btn btn-outline"><FaGoogle className="text-2xl"></FaGoogle> Continue With Google</button>
+                            
+                            <SocialLogin></SocialLogin>
                         </div>
 
                         <div className="w-full grid justify-center">

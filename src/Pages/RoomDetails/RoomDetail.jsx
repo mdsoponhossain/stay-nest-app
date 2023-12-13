@@ -33,7 +33,7 @@ const RoomDetail = () => {
             html: `
             <img src=${image} />
             Tittle :  ${title},<br>
-            Seat :  ${seat},<br>
+            Seat :  1,<br>
             price per night : $ ${price},<br>
             Room Size :  ${roomSize}
             
@@ -92,7 +92,7 @@ const RoomDetail = () => {
 
     return (
         <div className="border-4 w-full h-2/6  mx-auto">
-            <div className="card w-full bg-base-100 shadow-xl">
+            <div className="card w-full bg-base-100 shadow-xl  dark:bg-black dark:text-slate-300  ">
                 <figure><img className="w-full" src={image} alt={room_number} /></figure>
 
 
@@ -107,7 +107,7 @@ const RoomDetail = () => {
                         </div>
                     </div>
                     <p className="text-2xl text-gray-600 font-bold">Price:${price}</p>
-                    <p className="text-2xl text-gray-600 font-bold">Seat:{seat ? <span>{seat}</span> : <span className="text-red-500 font-bold">Unavailble</span>  }</p>
+                    <p className="text-2xl text-gray-600 font-bold">Total Seat:{seat ? <span>{seat}</span> : <span className="text-red-500 font-bold">Unavailble</span>  }</p>
                     <p className="text-2xl text-gray-600 font-bold">Room Size:{roomSize}</p>
                     <p className="text-2xl text-gray-600 font-bold">Availability:{seat ? 'Available' : <span className="text-red-500 font-bold">Unavailble</span>}</p>
 

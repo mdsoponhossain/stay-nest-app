@@ -51,7 +51,7 @@ const UpdateBooking = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200  dark:bg-black dark:text-slate-300 ">
             <Tittle title='stay-nest/update-booking-info' />
             <div className="hero-content flex-col ">
 

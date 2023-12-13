@@ -53,7 +53,7 @@ const Rooms = () => {
 
 
     return (
-        <div>
+        <div className=" dark:bg-black dark:text-slate-300">
             <Tittle title='stay-nest/rooms'/>
             <div className="h-10 w-full">
                 <select onChange={handleSorting} className="bg-[#0cc4b0] text-white" >

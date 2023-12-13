@@ -1,9 +1,11 @@
-### website link:https://stay-nest.web.app/
+### website link:https://stay-nest.web.app
+## Description:
+This is a hotel booking website. People can book room in a hotel .If anyone book a room , first he/she need to sign UP the website.User can update booking   cancel date before one day.After all the website is eye catching and user friendly.
 
 ### Features of this project
-- This website is eye catching and user friendly
-- Everything of this website is dynamic with mongodb;
-- Private or protected routes make users secure;
-- User can book room and add reviews and that store in mongodb;
-- Responsive design for big to small is implemented;
-- User can cancel or update booking date before one of booking;
+- Firebase authentication is implemented
+- Mongodb database implemented
+- React js implemented
+- React awesome component is implemented
+- Social authentication is implemented
+

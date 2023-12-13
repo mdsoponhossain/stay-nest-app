@@ -120,7 +120,7 @@ const MyBookings = () => {
 
 
     return (
-        <div>
+        <div className=" dark:bg-black dark:text-slate-100 ">
             <Tittle title='stay-nest/my-bookings' />
             <div className="text-center">
                 <h3 className="text-2xl font-semibold">{moment().format('MMMM Do YYYY, h:mm:ss a')}</h3>
@@ -129,7 +129,7 @@ const MyBookings = () => {
 
             <div>
                 <div className="overflow-x-auto">
-                    <table className="table">
+                    <table className="table  dark:bg-black dark:text-slate-300  ">
                         {/* head */}
                         <thead>
                             <tr>

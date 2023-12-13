@@ -7,7 +7,7 @@ const AboutUs = () => {
     const aboutDataAll = useLoaderData()
     console.log(aboutDataAll)
     return (
-        <div className="p-3">
+        <div className="p-3  dark:bg-black dark:text-slate-300 ">
             <Tittle  title='stay-nest/about-us'/>
             <div>
                 {

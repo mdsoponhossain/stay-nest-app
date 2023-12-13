@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import axios from "axios";
@@ -6,7 +6,11 @@ import Swal from "sweetalert2";
 
 
 const NavBar = () => {
-    const { user, handleLogOut } = useContext(AuthContext);
+    const { user, handleLogOut,handleThemeSwitch} = useContext(AuthContext);
+  
+
+
+
     const navItems = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
@@ -18,6 +22,8 @@ const NavBar = () => {
 
 
     </>
+
+    
 
 
 
@@ -62,9 +68,9 @@ const NavBar = () => {
             })
     }
     return (
-        <div className="navbar bg-base-100 ">
+        <div className="navbar bg-base-100 dark:bg-black dark:text-slate-400 ">
 
-            <div className="navbar-start">
+            <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -74,6 +80,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-2xl font-bold text-[#09ad9b] ">StayNest.com</a>
+                <button onClick={handleThemeSwitch}>theme-mode</button>
 
             </div>
 

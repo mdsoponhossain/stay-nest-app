@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, TwitterAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
 import axios from "axios";
@@ -9,7 +9,41 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     const [updateRoom ,setUpdateRoom] = useState()
     const [user, setUser] = useState();
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
+    // modeTheme;
+    const [theme, setTheme] = useState(null);
+    useEffect(()=>{
+        if(window.matchMedia('(prefers-color-schema:dark)').matches){
+            setTheme('dark');
+        }
+        else{
+            setTheme('light');
+        }
+    },[]);
+
+
+    useEffect(()=>{
+        if(theme === 'dark'){
+            document.documentElement.classList.add('dark');
+        }
+        else{
+            document.documentElement.classList.remove("dark");
+        }
+    },[theme])
+
+
+    const handleThemeSwitch=()=>{
+        setTheme(theme === "dark" ? "light" : "dark");
+    }
+
+
+
+
+
+
+
+
+
     const handleSignUp = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -27,6 +61,17 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth,provider);
 
 
+    }
+
+    const HandleFacebookLogin = ()=>{
+        setLoading(true);
+        const FBprovider = new FacebookAuthProvider();
+        return signInWithPopup(auth,FBprovider);
+    }
+    const setTwitterLogin =()=>{
+        setLoading(true);
+        const twitterProvider = new TwitterAuthProvider();
+        return signInWithPopup(auth,twitterProvider);
     }
 
 
@@ -77,8 +122,11 @@ const AuthProvider = ({ children }) => {
         user,
         loading,
         handleGoogleLogin,
+        HandleFacebookLogin,
         setUpdateRoom,
-        updateRoom
+        updateRoom,
+        setTwitterLogin,
+        handleThemeSwitch
 
     }
 

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import Tittle from "../../SharedComponent/Tittle";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 
 const SignUp = () => {
@@ -33,13 +34,15 @@ const SignUp = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen  dark:bg-black dark:text-slate-300  bg-base-200">
             <Tittle  title='stay-nest/sign-up'/>
             <div className="hero-content flex-col ">
-
                 <div className="card flex-shrink-0  w-[400px] h-fit shadow-2xl bg-base-100">
                     <h1 className="text-5xl font-bold text-center text-[#0cc4b0] pt-10">Sign Up </h1>
                     <form className="card-body" onSubmit={handleSignUpFormSubmit}>
+                    <SocialLogin></SocialLogin>
+
+                    <p className="text-2xl font-bold text-center">Or</p>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>

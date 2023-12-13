@@ -2,7 +2,7 @@ import { FaStar } from 'react-icons/fa';
 
 const ClientReviews = () => {
     return (
-        <div className="carousel w-full h-[600px] bg-no-repeat bg-cover " style={{ backgroundImage: 'url(https://i.ibb.co/3vBXvgg/hotel-2.jpg)' }}>
+        <div className="  dark:bg-black dark:text-slate-300 carousel w-full h-[600px] bg-no-repeat bg-cover " style={{ backgroundImage: 'url(https://i.ibb.co/3vBXvgg/hotel-2.jpg)' }}>
 
 
 

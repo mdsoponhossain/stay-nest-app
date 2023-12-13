@@ -4,7 +4,7 @@ import { MdFoodBank } from 'react-icons/md'
 
 const FeaturedRoom = () => {
     return (
-        <div className="bg-base-200 py-40 ">
+        <div className="bg-base-200 dark:bg-black dark:text-slate-300 py-40 ">
                 <h3 className='text-center text-4xl text-gray-600 py-6 font-bold'>Room Features</h3>
             <div className="md:w-3/5 grid h-fit md:grid-cols-2   items-center w-full  gap-1  mx-auto">
                 <div className=" my-auto h-[400px] ">

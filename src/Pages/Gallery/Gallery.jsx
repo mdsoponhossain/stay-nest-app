@@ -9,7 +9,7 @@ const Gallery = () => {
     return (
         <div>
             <Tittle  title='stay-nest/gallery'/>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className=" dark:bg-black dark:text-slate-300  grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
                    galleries.map(galleryItem=><GalleryItem key={galleryItem._id} galleryItem={galleryItem}></GalleryItem>)
                 }

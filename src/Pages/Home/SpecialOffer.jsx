@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SpecialOffer = () => {
     return (
-        <div className=" h-auto grid items-center py-20 bg-base-200">
+        <div className=" dark:bg-black h-auto grid items-center py-20 bg-base-200">
             <h3 className="text-4xl mb-2 text-center text-gray-600  font-bold">Special Offers</h3>
 
             <div className="hero-content gap-0 border-4 w-full bg-white   /* flex-col */ lg:flex-row md:w-3/5 mx-auto">
