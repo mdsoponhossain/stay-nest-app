@@ -36,10 +36,10 @@ const SignUp = () => {
     return (
         <div className="hero min-h-screen  dark:bg-black dark:text-slate-300  bg-base-200">
             <Tittle  title='stay-nest/sign-up'/>
-            <div className="hero-content flex-col ">
-                <div className="card flex-shrink-0  w-[400px] h-fit shadow-2xl bg-base-100">
+            <div className="md:hero-content w-full flex-col ">
+                <div className="card  dark:bg-black dark:text-slate-300 flex-shrink-0 w-full   md:w-[400px] h-fit shadow-2xl bg-base-100">
                     <h1 className="text-5xl font-bold text-center text-[#0cc4b0] pt-10">Sign Up </h1>
-                    <form className="card-body" onSubmit={handleSignUpFormSubmit}>
+                    <form className="card-body w-full" onSubmit={handleSignUpFormSubmit}>
                     <SocialLogin></SocialLogin>
 
                     <p className="text-2xl font-bold text-center">Or</p>

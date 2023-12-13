@@ -14,6 +14,14 @@ const NavBar = () => {
 
 
     const navItems = <>
+
+        <button className=" block md:hidden ml-10" onClick={() => handleThemeSwitch()}>
+            <span onClick={() => setToggle(!toggle)}>
+                {
+                    toggle === true ? <FaToggleOff className="text-3xl"></FaToggleOff> : <FaToggleOn className="text-3xl"></FaToggleOn>
+                }
+            </span>
+        </button>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/rooms'>Rooms</NavLink></li>
         {
@@ -21,8 +29,6 @@ const NavBar = () => {
         }
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
         <li><NavLink to='/about-us'>About Us</NavLink></li>
-
-
     </>
 
 
@@ -83,11 +89,11 @@ const NavBar = () => {
                 </div>
                 <a className="btn btn-ghost normal-case text-2xl font-bold text-[#09ad9b] ">StayNest.com</a>
 
-                <button className="ml-10" onClick={() => handleThemeSwitch()}>
+                <button className=" hidden md:block ml-10" onClick={() => handleThemeSwitch()}>
                     <span onClick={() => setToggle(!toggle)}>
-                       {
-                        toggle === true ?  <FaToggleOff className="text-3xl"></FaToggleOff> :  <FaToggleOn className="text-3xl"></FaToggleOn>
-                       }
+                        {
+                            toggle === true ? <FaToggleOff className="text-3xl"></FaToggleOff> : <FaToggleOn className="text-3xl"></FaToggleOn>
+                        }
                     </span>
                 </button>
 
@@ -101,7 +107,7 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-end">
-                <div className="mr-2">
+                <div className="  mr-2">
                     {
                         user && <div className="block">
                             {
@@ -109,7 +115,7 @@ const NavBar = () => {
                             }
                         </div>
                     }
-                    <div>
+                    <div className="hidden md:block">
                         {
                             user?.email && <span>{user?.email}</span>
                         }
@@ -117,7 +123,7 @@ const NavBar = () => {
                 </div>
 
                 {
-                    user ? <><button onClick={handleUserLogOut} className="btn text-white btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]">Log Out</button></> : <><NavLink className="btn text-white btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]" to='/login'>Log In</NavLink></>
+                    user ? <><button onClick={handleUserLogOut} className="btn block btn-xs text-white md:btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]">Log Out</button></> : <><NavLink className="btn text-white btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]" to='/login'>Log In</NavLink></>
                 }
 
             </div>

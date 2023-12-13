@@ -39,13 +39,13 @@ const Login = () => {
  
 
     return (
-        <div className="hero min-h-screen  dark:bg-black dark:text-slate-300  bg-base-200">
+        <div className="hero min-h-screen w-full dark:bg-black dark:text-slate-300  bg-green-300">
             <Tittle  title='stay-nest/login'/>
-            <div className="hero-content flex-col ">
+            <div className="md:hero-content w-full flex-col ">
 
-                <div className="card flex-shrink-0  w-[400px] h-fit shadow-2xl bg-base-100">
-                    <h1 className="text-5xl font-bold text-center text-[#0cc4b0] pt-10">Login </h1>
-                    <form onSubmit={handleLogInFormSubmit} className="card-body">
+                <div className="card flex-shrink-0 w-full dark:bg-black dark:text-slate-300  md:w-[400px] h-fit shadow-2xl bg-base-100">
+                    <h1 className="text-5xl  font-bold text-center text-[#0cc4b0] mb-2 pt-10">Login </h1>
+                    <form onSubmit={handleLogInFormSubmit} className=" dark:bg-black dark:text-slate-300 card-body w-full">
                         <div className="w-full mb-1">
                             
                             <SocialLogin></SocialLogin>
