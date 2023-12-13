@@ -3,11 +3,13 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 
 
 const NavBar = () => {
-    const { user, handleLogOut,handleThemeSwitch} = useContext(AuthContext);
-  
+    const { user, handleLogOut, handleThemeSwitch } = useContext(AuthContext);
+    const [toggle, setToggle] = useState(true);
+
 
 
 
@@ -23,12 +25,12 @@ const NavBar = () => {
 
     </>
 
-    
 
 
 
 
-    
+
+
     // console.log(user)
     const handleUserLogOut = () => {
         const email = user.email
@@ -50,8 +52,8 @@ const NavBar = () => {
                 //     method:'POST',
                 //     headers:{'content-type':'application-json'},
                 //     body:JSON.stringify(userInfo)
-                    
-                    
+
+
                 // })
                 // .then(res=>res.json())
                 // .then(data=>{
@@ -80,7 +82,14 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-2xl font-bold text-[#09ad9b] ">StayNest.com</a>
-                <button onClick={handleThemeSwitch}>theme-mode</button>
+
+                <button className="ml-10" onClick={() => handleThemeSwitch()}>
+                    <span onClick={() => setToggle(!toggle)}>
+                       {
+                        toggle === true ?  <FaToggleOff className="text-3xl"></FaToggleOff> :  <FaToggleOn className="text-3xl"></FaToggleOn>
+                       }
+                    </span>
+                </button>
 
             </div>
 
