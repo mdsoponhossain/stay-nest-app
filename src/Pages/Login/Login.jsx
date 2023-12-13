@@ -39,7 +39,7 @@ const Login = () => {
  
 
     return (
-        <div className="hero min-h-screen w-full dark:bg-black dark:text-slate-300  bg-green-300">
+        <div className="hero min-h-screen w-full dark:bg-black dark:text-slate-300  bg-white">
             <Tittle  title='stay-nest/login'/>
             <div className="md:hero-content w-full flex-col ">
 
