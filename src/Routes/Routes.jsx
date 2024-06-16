@@ -13,6 +13,10 @@ import UserComment from "../Pages/UserComment/UserComment";
 import Gallery from "../Pages/Gallery/Gallery";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import UpdateBooking from "../Pages/UpdateBooking/UpdateBooking";
+import AllGalleryItems from "../Pages/Gallery/AllGalleryItems";
+import GalleryRooms from "../Pages/Gallery/GalleryRooms";
+import GalleryResturant from "../Pages/Gallery/GalleryResturant";
+import GalleryOthers from "../Pages/Gallery/GalleryOthers";
 
     
    
@@ -31,12 +35,13 @@ import UpdateBooking from "../Pages/UpdateBooking/UpdateBooking";
         {
           path:'/Rooms',
           element:<Rooms></Rooms>,
-          loader:()=>fetch('https://stay-nest-server.vercel.app/roomsCount')
+          loader:()=>fetch('https://stay-nest-server-side.vercel.app/roomsCount')
         },
         {
           path:'/RoomDetails/:id',
-          element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
-          loader:({params})=>fetch(`https://stay-nest-server.vercel.app/rooms/${params.id}`)
+          // element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
+          element:<RoomDetail></RoomDetail>,
+          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`)
         },
         {
           path:'/login',
@@ -53,17 +58,35 @@ import UpdateBooking from "../Pages/UpdateBooking/UpdateBooking";
         {
           path:'/user-comment/:id',
           element:<UserComment></UserComment>,
-          loader:({params})=>fetch(`https://stay-nest-server.vercel.app/rooms/${params.id}`)
+          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`)
         },
         {
           path:'/gallery',
           element:<Gallery></Gallery>,
-          loader:()=>fetch('https://stay-nest-server.vercel.app/rooms')
+          children: [
+            {
+              path: '',
+              element: <AllGalleryItems></AllGalleryItems>
+            },
+            {
+              path:'rooms',
+              element:<GalleryRooms></GalleryRooms>
+            },
+            {
+              path:'resturant',
+              element:<GalleryResturant></GalleryResturant>
+            },
+            {
+              path:'others',
+              element:<GalleryOthers></GalleryOthers>
+            }
+          ],
+          loader:()=>fetch('https://stay-nest-server-side.vercel.app/rooms')
         },
         {
           path:'/about-us',
           element:<AboutUs></AboutUs>,
-          loader:()=>fetch('https://stay-nest-server.vercel.app/about-us')
+          loader:()=>fetch('https://stay-nest-server-side.vercel.app/about-us')
 
         },
         {

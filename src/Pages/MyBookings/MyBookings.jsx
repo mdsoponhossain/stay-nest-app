@@ -59,7 +59,7 @@ const MyBookings = () => {
                 confirmButtonText: "confirm"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`https://stay-nest-server.vercel.app/booking-delete/${_id}`, {
+                    fetch(`https://stay-nest-server-side.vercel.app/booking-delete/${_id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
@@ -72,7 +72,7 @@ const MyBookings = () => {
                     //jjjjjjjjjjjjjj
                     const updateRoomInfo = { seat:1 }
 
-                    fetch(`https://stay-nest-server.vercel.app/rooms-upadate-seat/${id}`, {
+                    fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate-seat/${id}`, {
                         updateRoomInfo,
                         method: 'PATCH',
                         headers: { 'content-type': 'application/json' },

@@ -91,7 +91,7 @@ const AuthProvider = ({ children }) => {
             const userInfo = { email }
             if (currentUser) {
 
-                axios.post('https://stay-nest-server.vercel.app/access-token', userInfo, { withCredentials: true })
+                axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, { withCredentials: true })
                     .then(res => {
                         console.log(11111, res.data)
                     })

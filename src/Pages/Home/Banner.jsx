@@ -1,17 +1,67 @@
-import { Link } from "react-router-dom";
 
-
+import { Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
     return (
-        <div className="hero h-[500px] dark:bg-black " style={{ backgroundImage: 'url(https://i.ibb.co/m52hTyW/hotel-1.jpg)' }}>
+        <div className="hero h-[60vh]  md:h-[92vh] mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://t3.ftcdn.net/jpg/00/29/13/38/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg)' }}>
+
             <div className="hero-overlay bg-black bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
+            <div className="hero-content text-center text-neutral-content absolute top-10 md:top-40 lg:top-72">
                 <div className="max-w-5xl ">
-                    <h3 className='text-4xl font-serif font-bold my-3' >StayNest.com</h3>
-                    <p className='text-md my-3 font-serif font-semibold'  >Your Simplified Hotel Booking Solution. Find, compare,<br /> and secure the ideal accommodations for your travel needs.<br /> Experience convenience, comfort, and worry-free bookings <br /> with us, so you can focus on what truly matters - your journey."</p>
-                    <Link to='/rooms'><button className="btn  text-white bg-[#0cc4b0] hover:bg-[#09ad9b] border-none my-4"  >Get Started</button></Link>
+                    <h3 className=' text-2xl md:text-4xl lg:text-5xl font-serif font-bold my-3' >Welcome to StayNest Hotel</h3>
+                    <p className="text-xl font-bold">  </p>
+
+                    {/* typwriter effects */}
+                    <Typewriter
+                        words={['We are always dedicated to you.', 'Where every stay is unique.', 'We are nearby to you', 'And we always ready to your need.']}
+                        cursor
+                        cursorStyle='_'
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                        loop={true}
+                    />
+                    <br></br>
+
+                    <button className="border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold hover:bg-white hover:text-[#079988]">
+                        <Link to='/rooms'>BOOK NOW</Link>
+                    </button>
+
                 </div>
+            </div>
+            {/* form container */}
+            <div className="max-w-7xl z-10  absolute -bottom-80 md:-bottom-10 md:bg-white h-fit xl:w-[90%] lg:w-[90%] md:w-[95%] md:mx-auto w-full">
+                <form className="p-5  shadow-lg  w-[92%] bg-white mx-auto md:w-full">
+                    <div className="md:flex gap-3 justify-center items-end md:h-24 lg:h-28 pb-6">
+                        <div className="mb-5 md:mb-0">
+                            <input type="date" placeholder="From" className="h-12 pl-3 w-full xl:w-52
+                            lg:w-40 md:w-32 border border-black " />
+                        </div>
+
+                        <div className="mb-5 md:mb-0">
+                            <input type="date" placeholder="To" className="h-12 pl-3 xl:w-52
+                            lg:w-40 md:w-32 border border-black w-full" />
+                        </div>
+
+                        <div className="mb-5 md:mb-0">
+                            <input type="text" placeholder="Adults" className="h-12 pl-3 xl:w-52
+                            lg:w-40 md:w-32 border border-black w-full" />
+                        </div>
+
+                        <div className="mb-5 md:mb-0">
+                            <input type="text" placeholder="Childrens" className="h-12 pl-3 xl:w-52
+                            lg:w-40 md:w-32 border border-black w-full" />
+                        </div>
+
+                        <div className="mb-5 md:mb-0">
+                            <button className="h-12 pl-3 xl:w-52 button-primary text-md
+                            lg:w-40 md:w-32 border border-black w-full">
+                                CHECK AVIAILAVILITY
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     );
@@ -19,20 +69,3 @@ const Banner = () => {
 
 export default Banner;
 
-<div className="carousel w-full h-[600px]">
-    <div id="slide1" className="carousel-item relative w-full bg-white">
-        <img src="" className="w-full" />
-
-
-        <div className="absolute  transform -translate-y-1/2 left-5 right-5 top-1/2 bg-gradient-to-r from-[#817c7c] to-[rgba(21, 21, 21, 0.00)] h-full left-0 grid items-center ">
-            <div className='text-center'>
-
-            </div>
-
-
-        </div>
-    </div>
-
-
-
-</div>
