@@ -55,9 +55,9 @@ const Rooms = () => {
 
 
     return (
-        <section>
+        <section className="dark:bg-black">
             {/* banner section */}
-            <div className="hero h-[300px]  mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/437375235.jpg?k=8ee74cdd790c4d99cc1617526767d5dc758cfc05088a3e618e3019d177a5e17a&o=&hp=1)' }}>
+            <div className="hero h-[300px]  mb-16 md:mb-0 relative " style={{ backgroundImage: 'url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/437375235.jpg?k=8ee74cdd790c4d99cc1617526767d5dc758cfc05088a3e618e3019d177a5e17a&o=&hp=1)' }}>
                 <div className="hero-overlay bg-black bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content absolute top-10 md:top-20 ">
                     <div className="max-w-5xl ">
@@ -66,9 +66,9 @@ const Rooms = () => {
                     </div>
                 </div>
 
-                <div className="h-20 absolute max-w-4xl shadow-lg -bottom-10 bg-white w-[95%] md:w-[70%] lg:w-[60%] mx-auto text-black   flex justify-center items-center">
+                <div className="h-20 absolute max-w-4xl dark:bg-slate-700 shadow-lg -bottom-10 bg-white w-[95%] md:w-[70%] lg:w-[60%] mx-auto text-black   flex justify-center items-center">
                     <label htmlFor="sortValue" className="button-primary py-2 px-3">Sort By  Price</label>
-                    <select onChange={handleSorting} id="sortValue" className=" h-10  border border-black " >
+                    <select onChange={handleSorting} id="sortValue" className="dark:bg-slate-400 h-10  border border-black " >
                         <option value="1">Cheap Rooms First</option>
                         <option value="-1">Expensive Rooms First</option>
                     </select>
@@ -77,7 +77,7 @@ const Rooms = () => {
             </div>
 
             {/* container of rooms */}
-            <div className="dark:bg-black dark:text-slate-300 mt-24">
+            <div className="dark:bg-black  mt-24">
                 <div className="  max-w-7xl mx-auto">
                     <Tittle title='stay-nest/rooms' />
 

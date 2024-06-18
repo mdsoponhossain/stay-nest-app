@@ -11,7 +11,7 @@ import SpecialOffer from "./SpecialOffer";
 
 const Home = () => {
     return (
-        <div>
+        <div className="dark:bg-black dark:text-white">
           <Tittle title='stay-nest/home'/>
           <Banner></Banner>
           <HotelRooms></HotelRooms>

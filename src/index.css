@@ -23,6 +23,7 @@
 
 .primary-color {
     color: var(--btn);
+    font-weight: 700;
 }
 
 .button-primary:hover {

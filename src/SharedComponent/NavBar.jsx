@@ -10,7 +10,7 @@ import { PiSun } from "react-icons/pi";
 const NavBar = () => {
     const { user, handleLogOut, handleThemeSwitch } = useContext(AuthContext);
     const [toggle, setToggle] = useState(true);
-    console.log('the user:',user?.email)
+   
 
 
 
@@ -48,37 +48,21 @@ const NavBar = () => {
                 Swal.fire({
                     title: "Good job!",
                     text: "Your Logout is successfully done",
-                    icon: "success"
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer:1500
                 });
                 axios.post('https://stay-nest-server-side.vercel.app/clear-token', userInfo, { withCredentials: true })
                     .then(res => {
-                        console.log(222222222, res.data)
+                        // console.log(222222222, res.data)
                     })
-
-
-                // fetch('https://stay-nest-server-side.vercel.ap/clear-token',{
-                //     method:'POST',
-                //     headers:{'content-type':'application-json'},
-                //     body:JSON.stringify(userInfo)
-
-
-                // })
-                // .then(res=>res.json())
-                // .then(data=>{
-                //     console.log('navbar',data)
-                // })
-
-
-
-
-
             })
             .catch(() => {
-                console.log('user log out failed')
+                // console.log('user log out failed')
             })
     }
     return (
-        <div className="dark:bg-black dark:text-slate-400 shadow-lg  ">
+        <div className="dark:bg-black dark:text-white shadow-lg  ">
             <div className="navbar bg-base-100 dark:bg-black dark:text-slate-400  max-w-7xl mx-auto ">
 
                 <div className="navbar-start ">
@@ -115,26 +99,11 @@ const NavBar = () => {
 
 
                     <div className="  mr-2">
-                        {/* {
-                            user && <div className="block">
-                                {
-                                    user?.photoURL && <img className="w-12 h-12 rounded-3xl" src={user?.photoURL} /> || <img className="rounded-3xl w-[50px] h-[50px]" src='https://i.ibb.co/K5Q1JQN/profile-1.jpg' />
-                                }
-                            </div>
-                        } */}
-                        {/* <div className="hidden md:block">
-                            {
-                                user?.email && <span>{user?.email}</span>
-                            }
-                        </div> */}
+                        
 
                     </div>
 
-                    {/* {
-                        user ? <><button onClick={handleUserLogOut} className="btn block btn-xs text-white md:btn-sm bg-[#0cc4b0] hover:bg-[#09ad9b]">Log Out</button></> : <ul style={{ textDecoration: 'none' }}>
-                            <li ><NavLink className='ml-5 font-semibold text-lg' to='/login'>Login</NavLink></li>
-                        </ul>
-                    } */}
+                   
                     {
                         user ? <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="button" className="btn m-1">{
@@ -142,7 +111,7 @@ const NavBar = () => {
                             }</div>
                             <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-60">
                                 {user?.displayName && <li className="font-semibold text-[#079988] text-lg">{user?.displayName}</li>}
-                                {user?.email && <li className="font-semibold my-2 text-[#079988] text-lg">{user?.email}</li>}
+                                {user?.email && <li className="font-semibold  text-[#079988] text-lg">{user?.email}</li>}
                                 <li onClick={handleUserLogOut} className="button-primary py-1 text-center">Logout</li>
                             </ul>
                         </div> : <ul style={{ textDecoration: 'none' }}>

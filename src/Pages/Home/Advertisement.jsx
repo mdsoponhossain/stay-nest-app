@@ -1,7 +1,7 @@
 
 const Advertisement = () => {
     return (
-        <div className=" w-full md:p-2  bg-white max-w-7xl mx-auto mt-14 md:mt-24 ">
+        <div className="dark:bg-black w-full md:p-2  bg-white max-w-7xl mx-auto mt-14 md:mt-24 ">
             <h1 className=" md:mb-7 items-start text-center text-4xl font-bold ">Advertisement</h1>
             <marquee direction="left">
 

@@ -1,8 +1,16 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
+    const navigate = useNavigate();
+    const handleForm = (e) => {
+        e.preventDefault();
+        navigate('/rooms')
+
+    }
+
+
     return (
         <div className="hero h-[60vh] z-0  md:h-[92vh] mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://t3.ftcdn.net/jpg/00/29/13/38/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg)' }}>
 
@@ -24,39 +32,39 @@ const Banner = () => {
                     />
                     <br></br>
 
-                    <button className="border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold hover:bg-white hover:text-[#079988]">
+                    <button className=" border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold hover:bg-white hover:text-[#079988]">
                         <Link to='/rooms'>BOOK NOW</Link>
                     </button>
 
                 </div>
             </div>
             {/* form container */}
-            <div className="max-w-7xl z-10  absolute -bottom-80 md:-bottom-10 md:bg-white h-fit xl:w-[90%] lg:w-[90%] md:w-[95%] md:mx-auto w-full">
-                <form className="p-5  shadow-lg  w-[92%] bg-white mx-auto md:w-full">
+            <div className="max-w-7xl z-10   absolute -bottom-80 md:-bottom-10 md:bg-white h-fit xl:w-[90%] lg:w-[90%] md:w-[95%] md:mx-auto w-full">
+                <form onSubmit={handleForm} className="p-5  shadow-lg  w-[92%] bg-white dark:bg-black mx-auto md:w-full">
                     <div className="md:flex gap-3 justify-center items-end md:h-24 lg:h-28 pb-6">
                         <div className="mb-5 md:mb-0">
                             <input type="date" placeholder="From" className="h-12 pl-3 w-full xl:w-52
-                            lg:w-40 md:w-32 border border-black " />
+                            lg:w-40 md:w-32 border border-black dark:bg-slate-700 " required />
                         </div>
 
                         <div className="mb-5 md:mb-0">
                             <input type="date" placeholder="To" className="h-12 pl-3 xl:w-52
-                            lg:w-40 md:w-32 border border-black w-full" />
+                            lg:w-40 md:w-32 border border-black w-full dark:bg-slate-700" required />
                         </div>
 
                         <div className="mb-5 md:mb-0">
                             <input type="text" placeholder="Adults" className="h-12 pl-3 xl:w-52
-                            lg:w-40 md:w-32 border border-black w-full" />
+                            lg:w-40 md:w-32 border border-black w-full dark:bg-slate-700" required />
                         </div>
 
                         <div className="mb-5 md:mb-0">
                             <input type="text" placeholder="Childrens" className="h-12 pl-3 xl:w-52
-                            lg:w-40 md:w-32 border border-black w-full" />
+                            lg:w-40 md:w-32 border border-black w-full dark:bg-slate-700" required/>
                         </div>
 
                         <div className="mb-5 md:mb-0">
                             <button className="h-12 pl-3 xl:w-52 button-primary text-md
-                            lg:w-40 md:w-32 border border-black w-full">
+                            lg:w-40 md:w-32 border border-black w-full ">
                                 CHECK AVIAILAVILITY
                             </button>
                         </div>

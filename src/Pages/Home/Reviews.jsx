@@ -19,8 +19,8 @@ const Reviews = () => {
    
 
     return (
-        <div className='bg-slate-100 pt-5'>
-          <h3 className="text-4xl mb-2 text-center text-gray-600 pt-4 md:pt-20 font-bold">Testimonials</h3>
+        <div className='bg-slate-100 pt-5 dark:bg-black dark:text-white '>
+          <h3 className="text-4xl mb-2 text-center dark:text-white text-gray-600 pt-4 md:pt-20 font-bold">Testimonials</h3>
             <div className='h-fit md:h-[400px] max-w-7xl mx-auto flex  items-center'>
                 <Swiper
                     spaceBetween={30}
@@ -37,7 +37,7 @@ const Reviews = () => {
                     className="mySwiper"
                 >
                     <SwiperSlide>
-                        <div className='m-4 p-4 h-full md:h-52 lg:w-[700px] md:w-[80%] mx-auto md:flex lg:gap-10 md:gap-5  items-center'>
+                        <div className='m-4 p-4 h-full  md:h-52 lg:w-[700px] md:w-[80%] mx-auto md:flex lg:gap-10 md:gap-5  items-center'>
 
 
                             <div className='flex justify-center'>
