@@ -10,6 +10,7 @@ import { PiSun } from "react-icons/pi";
 const NavBar = () => {
     const { user, handleLogOut, handleThemeSwitch } = useContext(AuthContext);
     const [toggle, setToggle] = useState(true);
+    console.log('the user:',user?.email)
 
 
 
@@ -49,13 +50,13 @@ const NavBar = () => {
                     text: "Your Logout is successfully done",
                     icon: "success"
                 });
-                axios.post('http://localhost:5000/clear-token', userInfo, { withCredentials: true })
+                axios.post('https://stay-nest-server-side.vercel.app/clear-token', userInfo, { withCredentials: true })
                     .then(res => {
                         console.log(222222222, res.data)
                     })
 
 
-                // fetch('http://localhost:5000/clear-token',{
+                // fetch('https://stay-nest-server-side.vercel.ap/clear-token',{
                 //     method:'POST',
                 //     headers:{'content-type':'application-json'},
                 //     body:JSON.stringify(userInfo)
@@ -139,9 +140,10 @@ const NavBar = () => {
                             <div tabIndex={0} role="button" className="btn m-1">{
                                 user?.photoURL && <img className="w-12 h-12 rounded-3xl" src={user?.photoURL} /> || <img className="rounded-3xl w-[50px] h-[50px]" src='https://i.ibb.co/K5Q1JQN/profile-1.jpg' />
                             }</div>
-                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-60">
+                            <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-60">
                                 {user?.displayName && <li className="font-semibold text-[#079988] text-lg">{user?.displayName}</li>}
-                                <li className="button-primary py-1 text-center">Logout</li>
+                                {user?.email && <li className="font-semibold my-2 text-[#079988] text-lg">{user?.email}</li>}
+                                <li onClick={handleUserLogOut} className="button-primary py-1 text-center">Logout</li>
                             </ul>
                         </div> : <ul style={{ textDecoration: 'none' }}>
                             <li ><NavLink className='ml-5 font-semibold text-lg' to='/login'>Login</NavLink></li>

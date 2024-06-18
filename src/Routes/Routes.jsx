@@ -8,7 +8,6 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "../SharedComponent/PrivateRoute";
 import MyBookings from "../Pages/MyBookings/MyBookings";
-// import ClientReviews from "../Pages/Home/ClientReviews";
 import UserComment from "../Pages/UserComment/UserComment";
 import Gallery from "../Pages/Gallery/Gallery";
 import AboutUs from "../Pages/AboutUs/AboutUs";
@@ -39,7 +38,6 @@ import GalleryOthers from "../Pages/Gallery/GalleryOthers";
         },
         {
           path:'/RoomDetails/:id',
-          // element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
           element:<RoomDetail></RoomDetail>,
           loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`)
         },
@@ -66,7 +64,8 @@ import GalleryOthers from "../Pages/Gallery/GalleryOthers";
           children: [
             {
               path: '',
-              element: <AllGalleryItems></AllGalleryItems>
+              element: <AllGalleryItems></AllGalleryItems>,
+              loader:()=>fetch('https://stay-nest-server-side.vercel.app/rooms')
             },
             {
               path:'rooms',
@@ -81,7 +80,6 @@ import GalleryOthers from "../Pages/Gallery/GalleryOthers";
               element:<GalleryOthers></GalleryOthers>
             }
           ],
-          loader:()=>fetch('https://stay-nest-server-side.vercel.app/rooms')
         },
         {
           path:'/about-us',
@@ -102,4 +100,3 @@ import GalleryOthers from "../Pages/Gallery/GalleryOthers";
   
 
 export default router;
-///  //:id

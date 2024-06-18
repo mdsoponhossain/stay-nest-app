@@ -14,17 +14,16 @@ const MyBookings = () => {
     const [bookings, setBookings] = useState([]);
     const axiosSecure = useAxiosSecure();
 
-    const userEmail = user.email;
-
-    // console.log(userEmail)
+    const userEmail = user?.email;
+    
 
     useEffect(() => {
         
 
 
-        axiosSecure.get(`/my-bookings/${userEmail}`, { withCredentials: true })
+        axiosSecure.get(`/my-bookings/${userEmail}`, { credentials: true })
             .then(res => {
-                console.log(333333333333, res.data);
+                console.log( res?.data);
 
                 setBookings(res.data)
 
@@ -95,11 +94,13 @@ const MyBookings = () => {
 
         else {
             Swal.fire({
+                position: "top-center",
                 icon: "error",
                 title: "Your booked room cancelation time is over",
                 text: "Your can cancel booking before one day",
-
-            });
+                showConfirmButton: false,
+                timer: 1500
+              });
 
         }
 
@@ -175,8 +176,8 @@ const MyBookings = () => {
                                     </td>
                                     <td>1</td>
 
-                                    <td>${booking.price}</td>
-                                    <td>${booking.date}</td>
+                                    <td>${booking?.price}</td>
+                                    <td>{booking?.date}</td>
 
                                     <th>
                                         <Link to={`/update-date/${booking._id}`}>

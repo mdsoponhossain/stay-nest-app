@@ -1,14 +1,11 @@
-import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
-import GalleryItem from "./GalleryItem";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import Tittle from "../../SharedComponent/Tittle";
 import { IoIosArrowForward } from "react-icons/io";
 
 
 const Gallery = () => {
-    const galleries = useLoaderData();
-    // console.log(galleries)
     return (
-        <div className="dark:bg-black dark:text-slate-300 pb-3 ">
+        <div className="dark:bg-black dark:text-slate-300 pb-3">
             <Tittle title='stay-nest/gallery' />
 
             {/* banner section */}
@@ -29,7 +26,7 @@ const Gallery = () => {
             <div className=" w-full max-w-7xl mx-auto ">
 
 
-                <div className="h-20 grid items-center w-2/5 font-bold mx-auto">
+                <div className="h-20 grid items-center lg:w-2/5 font-bold mx-auto">
                     <ul className="flex justify-around text-xl">
                         <li><NavLink to='/gallery'>All</NavLink></li>
                         <li><NavLink to='/gallery/rooms' >Rooms</NavLink></li>
@@ -39,16 +36,11 @@ const Gallery = () => {
                 </div>
 
 
-                <div>
+                <div className="min-h-screen">
                     <Outlet></Outlet>
                 </div>
 
 
-                <div className="  grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {
-                        galleries.map(galleryItem => <GalleryItem key={galleryItem._id} galleryItem={galleryItem}></GalleryItem>)
-                    }
-                </div>
             </div>
         </div>
     );

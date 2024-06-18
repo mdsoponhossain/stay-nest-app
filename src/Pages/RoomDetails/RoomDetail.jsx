@@ -12,16 +12,23 @@ const RoomDetail = () => {
     const { user, setUpdateRoom } = useContext(AuthContext)
     const person = user?.email;
     const [date, setDate] = useState();
+    console.log(image,balcony,seat,'....')
 
     const handleDate = (e) => {
         const date = e.target.value;
         console.log(date)
         setDate(date)
     }
-
+    // date converting function
+    function convertUTCtoLocal(utcDateString) {
+        const utcTime = new Date(utcDateString);
+        const localTime = utcTime.toLocaleString();
+        return localTime;
+    }
+   
     const HandleBooking = (id) => {
         setUpdateRoom(id)
-        const userBookingInfo = { image, id: _id, price, title, roomSize, bookStatus: 'booked', description, person, seat, room_number, date };
+        const userBookingInfo = { image, id: _id, price, title, roomSize, bookStatus: 'booked', description, person, seat, room_number, date:convertUTCtoLocal(new Date()) };
 
 
 
@@ -38,14 +45,15 @@ const RoomDetail = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch('http://localhost:5000/room-booking', {
+                fetch('https://stay-nest-server-side.vercel.app/room-booking',{
                     method: 'POST',
+                    withCredentials: true,
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(userBookingInfo)
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        console.log(data,'sopon')
                         if (data.insertedId) {
                             Swal.fire({
                                 title: "Good job!",
@@ -56,15 +64,16 @@ const RoomDetail = () => {
                         }
                     })
 
-                fetch(`http://localhost:5000/rooms-upadate/${id}`, {
+                fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate/${id}`, {
                     updateRoomInfo,
                     method: 'PATCH',
+                    withCredentials: true,
                     headers: { 'content-type': 'application/json' },
                     body: JSON.stringify(updateRoomInfo)
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        console.log(data,);
 
                     })
 

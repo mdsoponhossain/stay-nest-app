@@ -7,32 +7,32 @@ import axios from "axios";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    const [updateRoom ,setUpdateRoom] = useState()
+    const [updateRoom, setUpdateRoom] = useState()
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
     // modeTheme;
     const [theme, setTheme] = useState(null);
-    useEffect(()=>{
-        if(window.matchMedia('(prefers-color-schema:dark)').matches){
+    useEffect(() => {
+        if (window.matchMedia('(prefers-color-schema:dark)').matches) {
             setTheme('dark');
         }
-        else{
+        else {
             setTheme('light');
         }
-    },[]);
+    }, []);
 
 
-    useEffect(()=>{
-        if(theme === 'dark'){
+    useEffect(() => {
+        if (theme === 'dark') {
             document.documentElement.classList.add('dark');
         }
-        else{
+        else {
             document.documentElement.classList.remove("dark");
         }
-    },[theme])
+    }, [theme])
 
 
-    const handleThemeSwitch=()=>{
+    const handleThemeSwitch = () => {
         setTheme(theme === "dark" ? "light" : "dark");
     }
 
@@ -55,23 +55,23 @@ const AuthProvider = ({ children }) => {
     }
 
 
-    const handleGoogleLogin = ()=>{
+    const handleGoogleLogin = () => {
         setLoading(true);
         const provider = new GoogleAuthProvider();
-        return signInWithPopup(auth,provider);
+        return signInWithPopup(auth, provider);
 
 
     }
 
-    const HandleFacebookLogin = ()=>{
+    const HandleFacebookLogin = () => {
         setLoading(true);
         const FBprovider = new FacebookAuthProvider();
-        return signInWithPopup(auth,FBprovider);
+        return signInWithPopup(auth, FBprovider);
     }
-    const setTwitterLogin =()=>{
+    const setTwitterLogin = () => {
         setLoading(true);
         const twitterProvider = new TwitterAuthProvider();
-        return signInWithPopup(auth,twitterProvider);
+        return signInWithPopup(auth, twitterProvider);
     }
 
 
@@ -90,20 +90,20 @@ const AuthProvider = ({ children }) => {
             const email = currentUser.email;
             const userInfo = { email }
             if (currentUser) {
-
-                axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, { withCredentials: true })
+                console.log('sopon user', userInfo)
+                axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, /* { withCredentials: true } */)
                     .then(res => {
                         console.log(11111, res.data)
                     })
 
 
 
-                }
+            }
 
-            })
+        })
 
 
-           
+
 
 
         return () => {

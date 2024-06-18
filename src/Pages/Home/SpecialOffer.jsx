@@ -10,7 +10,7 @@ const SpecialOffer = () => {
                 <div className="border-4 h-56">
                     <img className="h-full w-full  border-white" src="https://i.ibb.co/3vBXvgg/hotel-2.jpg" />
                 </div>
-                <div className=" w-full md:w-3/4 pl-5 h-56 text-gray-600 bg-white">
+                <div className=" w-full h-full md:w-3/4 pl-5 text-gray-600 bg-white">
                     <h1 className="text-3xl font-bold">Luxury Room</h1>
                     <p className="font-semibold">Start From $249</p>
 
@@ -22,7 +22,7 @@ const SpecialOffer = () => {
 
             <div className="hero-content gap-0 border-4 w-full bg-white   /* flex-col */ lg:flex-row md:w-3/5 mx-auto">
 
-                <div className=" mb-3 md:mb-0 w-full md:w-3/4 pl-5 h-56 text-gray-600 bg-white">
+                <div className=" mb-3 md:mb-0 w-full h-full md:w-3/4 pl-5  text-gray-600 bg-white">
                     <h1 className="text-3xl font-bold">  Family Suit</h1>
                     <p className="font-semibold"> Start From $279</p>
                     <p className="py-2 font-semibold"> Our Family Fun Getaway Package is designed to make your family's stay both memorable and affordable.Enjoy your <span className="text-2xl">10%</span> discount on the total booking amount.</p>

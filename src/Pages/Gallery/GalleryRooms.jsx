@@ -1,8 +1,11 @@
+import Tittle from "../../SharedComponent/Tittle";
 
 const GalleryRooms = () => {
     return (
-        <div>
-            rooms of gallery...
+        <div className="text-center">
+            <Tittle title='stay-nest/gallery/rooms-images' />
+
+            NO Rooms Data Yet...
         </div>
     );
 };

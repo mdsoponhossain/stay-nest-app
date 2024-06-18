@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
     return (
-        <div className="hero h-[60vh]  md:h-[92vh] mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://t3.ftcdn.net/jpg/00/29/13/38/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg)' }}>
+        <div className="hero h-[60vh] z-0  md:h-[92vh] mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://t3.ftcdn.net/jpg/00/29/13/38/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg)' }}>
 
             <div className="hero-overlay bg-black bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content absolute top-10 md:top-40 lg:top-72">

@@ -26,7 +26,7 @@ const UserComment = () => {
         const comment = e.target.comment.value;
         const userFeedback = { name, email, comment };
         userFeedback.rating = rating;
-        console.log(userFeedback);
+        // console.log(userFeedback);
         
 
         const updateRoomInfo = { userFeedback}
@@ -42,7 +42,9 @@ const UserComment = () => {
                     Swal.fire({
                         title: "Good job!",
                         text: "Your review is successfully added",
-                        icon: "success"
+                        icon: "success",
+                        showConfirmButton: false,
+                        timer:1500
                     });
                     return navigation('/my-bookings')
                 }

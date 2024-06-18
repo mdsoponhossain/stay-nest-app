@@ -33,14 +33,17 @@ const UpdateBooking = () => {
                     Swal.fire({
                         title: "Good job!",
                         text: "Your room date  is  updated successfully",
-                        icon: "success"
+                        showConfirmButton: false,
+                        icon: "success",
+                        timer: 1500
+
                     });
                     return navigation('/my-bookings')
                 }
 
             })
 
-        }
+    }
 
 
 
