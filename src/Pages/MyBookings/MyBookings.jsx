@@ -1,52 +1,33 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import axios from "axios";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-// import MyBooking from "./MyBooking";
 import moment from "moment/moment";
 import Tittle from "../../SharedComponent/Tittle";
 
 
 const MyBookings = () => {
-    const { user, updateRoom } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
     const axiosSecure = useAxiosSecure();
 
     const userEmail = user?.email;
-    
+
 
     useEffect(() => {
-        
-
-
-        axiosSecure.get(`/my-bookings/${userEmail}`, { credentials: true })
+        axiosSecure.get(`/my-bookings/${userEmail}`, { withCredentials: true })
             .then(res => {
-                console.log( res?.data);
-
                 setBookings(res.data)
-
             })
-
-
-
-
-
-
     }, [userEmail, axiosSecure]);
 
 
     const handleDelete = (_id, id, date) => {
-        console.log(3333, id);
-
         const currentDate = new Date();
-        console.log('ddd', date);
         const givenDateString = date;
         const givenDate = new Date(givenDateString);
-
         if (givenDate - currentDate > 86400000) {
-            console.log(givenDate - currentDate);//hhhhhhhhhhhhhh
 
             Swal.fire({
                 title: "Are you sure to delete booking ?",
@@ -62,15 +43,11 @@ const MyBookings = () => {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
-                        .then(data => {
-                            console.log(data);
+                        .then(() => {
                             const remaining = bookings.filter((booking) => booking._id !== _id)
                             setBookings(remaining)
                         })
-
-                    //jjjjjjjjjjjjjj
-                    const updateRoomInfo = { seat:1 }
-
+                    const updateRoomInfo = { seat: 1 }
                     fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate-seat/${id}`, {
                         updateRoomInfo,
                         method: 'PATCH',
@@ -78,18 +55,10 @@ const MyBookings = () => {
                         body: JSON.stringify(updateRoomInfo)
                     })
                         .then(res => res.json())
-                        .then(data => {
-                            console.log(data);
-
+                        .then(() => {
                         })
-
                 }
             });
-
-
-
-
-
         }
 
         else {
@@ -100,28 +69,18 @@ const MyBookings = () => {
                 text: "Your can cancel booking before one day",
                 showConfirmButton: false,
                 timer: 1500
-              });
+            });
 
         }
+    };
 
 
-
-
-
-
-    }
-
-
-
-
-   
-
-   
+  
 
 
 
     return (
-        <div className=" dark:bg-black dark:text-slate-100 ">
+        <div className="min-h-[100vh] pt-20 dark:bg-black dark:text-slate-100 ">
             <Tittle title='stay-nest/my-bookings' />
             <div className="text-center">
                 <h3 className="text-2xl font-semibold">{moment().format('MMMM Do YYYY, h:mm:ss a')}</h3>
@@ -130,10 +89,10 @@ const MyBookings = () => {
 
             <div>
                 <div className="overflow-x-auto">
-                    <table className="table  dark:bg-black dark:text-slate-300  ">
+                    <table className="table  dark:bg-black ">
                         {/* head */}
                         <thead>
-                            <tr>
+                            <tr className=" dark:text-white">
                                 <th>
                                     <label>
                                         <span>Delete</span>
@@ -148,12 +107,11 @@ const MyBookings = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* const {price ,image ,title,roomSize,bed,_id} = booking ; */}
                             {
                                 bookings.map((booking, index) => <tr key={index}>
                                     <th>
                                         <label>
-                                            <span onClick={() => handleDelete(booking._id, booking.id, booking.date)} className="btn">X</span>
+                                            <span onClick={() => handleDelete(booking._id, booking.id,booking.date_in_)} className="btn dark:bg-slate-700 dark:text-white dark:border-0">X</span>
                                         </label>
                                     </th>
                                     <td>
@@ -165,38 +123,29 @@ const MyBookings = () => {
                                             </div>
                                             <div>
                                                 <div className="font-bold">{booking.title}</div>
-                                                {/* <div className="text-sm opacity-50">United States</div> */}
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        {/* Zemlak, Daniel and Leannon */}
-                                        <br />
-                                        <span className="badge badge-ghost badge-sm">{booking.roomSize}</span>
+
+                                        <span className="  dark:text-white dark:bg-black">{booking?.roomSize}</span>
                                     </td>
                                     <td>1</td>
 
                                     <td>${booking?.price}</td>
-                                    <td>{booking?.date}</td>
+                                    <td>{booking?.date_in_}</td>
 
                                     <th>
                                         <Link to={`/update-date/${booking._id}`}>
-                                            <button  className="btn btn-ghost btn-xs">Update Date</button>
+                                            <button className="btn btn-ghost btn-xs bg-slate-50 dark:bg-slate-700">Update Date</button>
                                         </Link>
                                     </th>
                                     <th>
-                                        <Link to={`/user-comment/${booking.id}`}><button className="btn btn-ghost btn-xs">Add Review</button></Link>
+                                        <Link to={`/user-comment/${booking.id}`}><button className="btn btn-ghost btn-xs bg-slate-50 dark:bg-slate-700">Add Review</button></Link>
                                     </th>
                                 </tr>)
                             }
-
-
-
-
                         </tbody>
-
-
-
                     </table>
                 </div>
             </div>

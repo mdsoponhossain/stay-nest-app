@@ -17,7 +17,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 const HotelRooms = () => {
     return (
-        <div className="h-[700px] mt-96 md:mt-20 ">
+        <div className="h-[700px] mt-[65vh] md:mt-[20vh] ">
             <h1 className=' text-2xl text-center md:text-4xl lg:text-5xl font-serif font-bold my-5'>Hotel Master Rooms</h1>
             <p className='text-center pb-10'>Contrary to popular belief</p>
             <section className='max-w-7xl mx-auto '>

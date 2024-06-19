@@ -84,32 +84,18 @@ const AuthProvider = ({ children }) => {
     }
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            // console.log('the user from the authProvider:', currentUser)
             setUser(currentUser);
             setLoading(false);
             const email = currentUser.email;
             const userInfo = { email }
             if (currentUser) {
-                console.log('sopon user', userInfo)
-                axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, /* { withCredentials: true } */)
-                    .then(res => {
-                        console.log(11111, res.data)
+                axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, { withCredentials: true })
+                    .then(() => {
                     })
-
-
-
             }
 
-        })
-
-
-
-
-
-        return () => {
-            return unsubscribe();
-        }
-
+        });
+        return () => { unsubscribe(); }
     }, [])
 
 

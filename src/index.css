@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* navLink custom style */
 .active {
     color: #09ad9b;

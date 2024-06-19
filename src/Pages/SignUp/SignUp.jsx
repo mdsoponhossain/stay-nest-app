@@ -36,7 +36,7 @@ const SignUp = () => {
 
     }
     return (
-        <div className="hero min-h-screen  dark:bg-black dark:text-slate-300  bg-base-200">
+        <div className="hero min-h-screen pt-8  dark:bg-black dark:text-slate-300  bg-base-200">
             <Tittle  title='stay-nest/sign-up'/>
             <div className="md:hero-content w-full flex-col ">
                 <div className="card  dark:bg-black dark:text-slate-300 flex-shrink-0 w-full   md:w-[400px] h-fit shadow-2xl bg-base-100">

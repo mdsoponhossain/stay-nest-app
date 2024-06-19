@@ -16,6 +16,7 @@ import AllGalleryItems from "../Pages/Gallery/AllGalleryItems";
 import GalleryRooms from "../Pages/Gallery/GalleryRooms";
 import GalleryResturant from "../Pages/Gallery/GalleryResturant";
 import GalleryOthers from "../Pages/Gallery/GalleryOthers";
+import MyRegister from "../Pages/myRegister/MyRegister";
 
     
    
@@ -91,6 +92,10 @@ import GalleryOthers from "../Pages/Gallery/GalleryOthers";
           path: '/update-date/:id',
           element:<UpdateBooking></UpdateBooking>
           
+        },
+        {
+          path:'/my-registations',
+          element:<PrivateRoute><MyRegister></MyRegister></PrivateRoute>
         }
         
         

@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-// const axiosSecure = axios.create({ baseURL: 'https://stay-nest-server-side.vercel.app' })
-const axiosSecure = axios.create({ baseURL: 'https://stay-nest-server-side.vercel.app' })
+const axiosSecure = axios.create({ baseURL: 'https://stay-nest-server-side.vercel.app',withCredentials:true})
 
 
 const useAxiosSecure = () => {
@@ -16,7 +15,6 @@ const useAxiosSecure = () => {
         return response;
     },
     (error) => {
-            // console.log(121212, error.response.status);
             if(error.response.status === 401 || error.response.status === 403){
                 handleLogOut()
                 .then(()=>{

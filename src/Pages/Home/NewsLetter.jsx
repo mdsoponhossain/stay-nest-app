@@ -13,7 +13,7 @@ const NewsLetter = () => {
                 <p className="my-3 md:my-5">Stay updated with subscribing to our newsletter</p>
                 <form className="my-7 md:my-10">
                     <div>
-                        <input className="w-full h-14 dark:bg-slate-500 pl-3" placeholder="Enter Your Email Here..." type="email" name=""  />
+                        <input className="w-full h-14 dark:text-white  dark:bg-slate-500 pl-3" placeholder="Enter Your Email Here..." type="email" name=""  />
                     </div>
                     <button className="h-14 pl-3  button-primary my-5 text-md border border-black w-full">SUBSCRIBE </button>
                 </form>
