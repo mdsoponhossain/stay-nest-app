@@ -11,7 +11,6 @@ const Login = () => {
 
     const { handleLogIn} = useContext(AuthContext);
     const location = useLocation();
-    console.log(location)
     const navigation = useNavigate();
 
     const handleLogInFormSubmit = (e) => {
@@ -19,10 +18,8 @@ const Login = () => {
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
         handleLogIn(email, password)
-            .then(result => {
-                console.log(result.user);
+            .then(() => {
                 Swal.fire({
                     title: "Good job!",
                     text: "Your login is successfully done",
@@ -32,8 +29,7 @@ const Login = () => {
                 });
                 navigation(location?.state ? location.state : '/')
             })
-            .catch(error => {
-                console.log(error.message)
+            .catch(() => {
             })
 
     }
@@ -70,7 +66,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="Enter Your Password" className="input input-bordered" required />
+                            <input type="password" name="password" placeholder="Enter Your Password" autoComplete="current-password" className="input input-bordered" required />
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>

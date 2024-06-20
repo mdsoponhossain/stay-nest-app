@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
@@ -23,9 +23,8 @@ const RoomDetail = () => {
         data.seat = seat
         const userBookingInfo = { ...data, price, title, roomSize, bookStatus: 'booked', room_number, image };
         const updateRoomInfo = { seat: 1 }
-        fetch('https://stay-nest-server-side.vercel.app/room-booking', {
+        fetch('https://stay-nest-server-side.vercel.app/room-booking',{credentials:'include'}, {
             method: 'POST',
-            withCredentials: true,
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(userBookingInfo)
         })
@@ -33,8 +32,7 @@ const RoomDetail = () => {
             .then(data => {
                 if (data?.insertedId) {
 
-                    fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate/${_id}`, {
-                        updateRoomInfo,
+                    fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate/${_id}`,{credentials:'include'}, {
                         method: 'PATCH',
                         withCredentials: true,
                         headers: { 'content-type': 'application/json' },
@@ -89,7 +87,7 @@ const RoomDetail = () => {
             arrival, departure, adults, childrens, user: user?.email, id: _id,
             image, balcony, seat, price, title,roomSize
         }
-        fetch('https://stay-nest-server-side.vercel.app/room-regitering', {
+        fetch('https://stay-nest-server-side.vercel.app/room-regitering',{credentials:'include'}, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

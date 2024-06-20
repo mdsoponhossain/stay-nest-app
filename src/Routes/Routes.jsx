@@ -39,8 +39,8 @@ import MyRegister from "../Pages/myRegister/MyRegister";
         },
         {
           path:'/RoomDetails/:id',
-          element:<RoomDetail></RoomDetail>,
-          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`)
+          element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
+          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`,{credentials:'include'})
         },
         {
           path:'/login',
@@ -57,7 +57,7 @@ import MyRegister from "../Pages/myRegister/MyRegister";
         {
           path:'/user-comment/:id',
           element:<UserComment></UserComment>,
-          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`)
+          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`,{credentials:'include'})
         },
         {
           path:'/gallery',

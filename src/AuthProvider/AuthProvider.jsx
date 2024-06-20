@@ -86,10 +86,14 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             setLoading(false);
-            const email = currentUser.email;
+            const email = currentUser?.email;
             const userInfo = { email }
             if (currentUser) {
                 axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, { withCredentials: true })
+                    .then(() => {
+                    })
+            } else {
+                axios.post('https://stay-nest-server-side.vercel.app/clear-token', userInfo, { withCredentials: true })
                     .then(() => {
                     })
             }

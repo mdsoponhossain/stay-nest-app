@@ -2,12 +2,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaGoogle } from 'react-icons/fa'
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const SocialLogin = () => {
-    console.log(location)
     const navigation = useNavigate();
+    const location = useLocation();
     const { handleGoogleLogin } = useContext(AuthContext);
   
 
@@ -15,8 +15,7 @@ const SocialLogin = () => {
 
     const logInWithGoogle = () => {
         handleGoogleLogin()
-            .then((result) => {
-                console.log(result.user)
+            .then(() => {
                 Swal.fire({
                     title: "Good job!",
                     text: "Your login is successfully done",
@@ -24,8 +23,7 @@ const SocialLogin = () => {
                 });
                 navigation(location?.state ? location.state : '/')
             })
-            .catch((error) => {
-                console.log(error.message)
+            .catch(() => {
             })
     }
 

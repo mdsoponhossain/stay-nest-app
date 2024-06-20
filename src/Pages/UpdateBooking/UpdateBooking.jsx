@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Tittle from "../../SharedComponent/Tittle";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -11,23 +11,20 @@ const UpdateBooking = () => {
     const navigation = useNavigate();
 
     const { id } = useParams();
-    console.log(id)
 
     const handleDate = (e) => {
-        console.log(e.target.value)
         setDate(e.target.value)
     }
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const updateDate = { date }
-        fetch(`https://stay-nest-server-side.vercel.app/update-date/${id}`, {
+        fetch(`https://stay-nest-server-side.vercel.app/update-date/${id}`,{credentials:'include'}, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updateDate)
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.modifiedCount) {
                     Swal.fire({
                         title: "Good job!",

@@ -1,28 +1,25 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import axios from "axios";
-import { Link } from "react-router-dom";
 import Tittle from "../../SharedComponent/Tittle";
 import moment from "moment";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const MyRegister = () => {
     const [registations, setRegistations] = useState([]);
     const { user } = useContext(AuthContext);
     const userEmail = user?.email;
-
+    const axiosSecure = useAxiosSecure();
 
 
     useEffect(() => {
-        axios.get(`https://stay-nest-server-side.vercel.app/room-regitering/${userEmail}`, { withCredentials: true })
+        axiosSecure.get(`/room-regitering/${userEmail}`)
             .then(res => {
-                setRegistations(res.data)
+                setRegistations(res?.data)
             })
-    }, [userEmail]);
-    console.log(registations);
+    }, [userEmail,axiosSecure]);
 
     const handleDelete = (_id) => {
-        console.log('triger the deletions...')
         Swal.fire({
             title: "Are you sure to delete booking ?",
 
@@ -33,7 +30,7 @@ const MyRegister = () => {
             confirmButtonText: "confirm"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://stay-nest-server-side.vercel.app/registation-delete/${_id}`, {
+                fetch(`https://stay-nest-server-side.vercel.app/registation-delete/${_id}`,{credentials:'include'}, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
