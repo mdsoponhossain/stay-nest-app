@@ -15,9 +15,14 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Navigation } from 'swiper/modules';
+import { useEffect } from 'react';
+import Aos from 'aos';
 const HotelRooms = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
-        <div className="h-[700px] mt-[65vh] md:mt-[20vh] ">
+        <div data-aos="zoom-in-up" data-aos-duration="2000" className="h-[700px] mt-[65vh] md:mt-[20vh] ">
             <h1 className=' text-2xl text-center md:text-4xl lg:text-5xl font-serif font-bold my-5'>Hotel Master Rooms</h1>
             <p className='text-center pb-10'>Contrary to popular belief</p>
             <section className='max-w-7xl mx-auto '>

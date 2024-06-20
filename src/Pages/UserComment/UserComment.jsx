@@ -8,9 +8,9 @@ import Swal from "sweetalert2";
 
 const UserComment = () => {
     const [rating, setRaing] = useState();
-    const {_id} = useLoaderData();
+    const { _id } = useLoaderData();
     const navigation = useNavigate()
-   
+
 
     const hanldeRating = (e) => {
         const rating = e.target.value;
@@ -27,24 +27,24 @@ const UserComment = () => {
         const userFeedback = { name, email, comment };
         userFeedback.rating = rating;
         // console.log(userFeedback);
-        
 
-        const updateRoomInfo = { userFeedback}
+
+        const updateRoomInfo = { userFeedback }
         fetch(`https://stay-nest-server-side.vercel.app/client-review/${_id}`, {
-            updateRoomInfo,
+            credentials: 'include',
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updateRoomInfo)
         })
             .then(res => res.json())
             .then(data => {
-                if(data.modifiedCount){
+                if (data.modifiedCount) {
                     Swal.fire({
                         title: "Good job!",
                         text: "Your review is successfully added",
                         icon: "success",
                         showConfirmButton: false,
-                        timer:1500
+                        timer: 1500
                     });
                     return navigation('/my-bookings')
                 }
@@ -60,7 +60,7 @@ const UserComment = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200  dark:bg-black ">
-            <Tittle  title='stay-nest/client-review'/>
+            <Tittle title='stay-nest/client-review' />
             <div className="hero-content flex-col  ">
 
                 <div className="card flex-shrink-0 dark:bg-slate-700 dark:text-white md:w-[400px] h-fit shadow-2xl bg-base-100">

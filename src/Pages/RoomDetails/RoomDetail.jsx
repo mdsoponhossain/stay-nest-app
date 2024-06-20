@@ -22,9 +22,10 @@ const RoomDetail = () => {
         data.booking_time = convertUTCtoLocal(new Date());
         data.seat = seat
         const userBookingInfo = { ...data, price, title, roomSize, bookStatus: 'booked', room_number, image };
-        const updateRoomInfo = { seat: 1 }
-        fetch('https://stay-nest-server-side.vercel.app/room-booking',{credentials:'include'}, {
+        const updateRoomInfo = { seat: 1 };
+        fetch('https://stay-nest-server-side.vercel.app/my-bookings',{
             method: 'POST',
+            credentials:'include',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(userBookingInfo)
         })
@@ -32,9 +33,9 @@ const RoomDetail = () => {
             .then(data => {
                 if (data?.insertedId) {
 
-                    fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate/${_id}`,{credentials:'include'}, {
+                    fetch(`https://stay-nest-server-side.vercel.app/rooms-update/${_id}`,{
                         method: 'PATCH',
-                        withCredentials: true,
+                        credentials: 'include',
                         headers: { 'content-type': 'application/json' },
                         body: JSON.stringify(updateRoomInfo)
                     })
@@ -87,8 +88,9 @@ const RoomDetail = () => {
             arrival, departure, adults, childrens, user: user?.email, id: _id,
             image, balcony, seat, price, title,roomSize
         }
-        fetch('https://stay-nest-server-side.vercel.app/room-regitering',{credentials:'include'}, {
+        fetch('https://stay-nest-server-side.vercel.app/room-regitering',{
             method: 'POST',
+            credentials:'include',
             headers: {
                 'content-type': 'application/json',
             },

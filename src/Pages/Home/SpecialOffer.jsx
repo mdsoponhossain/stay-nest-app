@@ -1,9 +1,15 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
 const SpecialOffer = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
-        <div className=" dark:bg-black bg-white h-auto grid items-center pt-2 bg-base-200">
+        <div data-aos="fade-up"
+        data-aos-duration="3000"  className=" dark:bg-black bg-white h-auto grid items-center pt-2 ">
             <h3 className="text-4xl  text-center text-gray-600 mb-10 dark:text-white  font-bold">Special Offers</h3>
 
             <div className="hero-content gap-0 md:border-4 dark:border-0 w-full bg-white dark:bg-slate-700  /* flex-col */ lg:flex-row md:w-3/5 mx-auto">

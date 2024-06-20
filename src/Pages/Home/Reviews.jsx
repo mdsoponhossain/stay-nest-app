@@ -11,12 +11,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // import { FaStar } from 'react-icons/fa';
 
 import ReactStars from "react-rating-stars-component";
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 
 
 const Reviews = () => {
 
-   
+    useEffect(() => {
+        Aos.init();
+      }, [])
 
     return (
         <div className='bg-slate-100 pt-5 dark:bg-black dark:text-white '>

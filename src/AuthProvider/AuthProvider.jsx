@@ -1,4 +1,4 @@
-import { FacebookAuthProvider, GoogleAuthProvider, TwitterAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, TwitterAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
 import axios from "axios";
@@ -73,7 +73,9 @@ const AuthProvider = ({ children }) => {
         const twitterProvider = new TwitterAuthProvider();
         return signInWithPopup(auth, twitterProvider);
     }
-
+    const updateUserProfile = (userInfo) => {
+      return  updateProfile(auth.currentUser,{displayName:userInfo.displayName,photoURL:userInfo.photoURL})
+    }
 
 
 
@@ -116,7 +118,8 @@ const AuthProvider = ({ children }) => {
         setUpdateRoom,
         updateRoom,
         setTwitterLogin,
-        handleThemeSwitch
+        handleThemeSwitch,
+        updateUserProfile
 
     }
 
