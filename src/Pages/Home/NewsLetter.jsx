@@ -7,7 +7,7 @@ const NewsLetter = () => {
         Aos.init();
     }, [])
     return (
-        <div  className="bg-base-200 dark:bg-black dark:text-white">
+        <div  className="bg-base-200 dark:bg-black dark:text-white md:pb-16 lg:pb-0 lg:pt-20">
             <div className="md:flex justify-between pt-10 md:pt-0 p-2 h-fit md:h-[500px] max-w-7xl mx-auto">
                 <div data-aos="zoom-in" className="md:w-[90%] w-full grid justify-center items-center">
                     <img className="md:w-4/6 pb-3" src="https://i.ibb.co/W3VhBg4/yellow-envelope-removebg-preview.png" alt="" />

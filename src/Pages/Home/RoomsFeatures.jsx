@@ -11,7 +11,7 @@ const RoomsFeatures = () => {
   return (
     <div data-aos="fade-down"
     data-aos-easing="linear"
-    data-aos-duration="1500" className="h-fit py-3 md:h-80 pb-20 md:flex grid items-center gap-5 text-lg text-center max-w-7xl mx-auto">
+    data-aos-duration="1500" className="h-fit py-4 pt-7 md:h-80 pb-20 md:flex grid items-center gap-5 text-lg text-center max-w-7xl mx-auto">
 
       <div>
         <FaWifi className='w-full text-6xl text-[#06bfaa]'></FaWifi>

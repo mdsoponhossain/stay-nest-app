@@ -48,7 +48,7 @@ const Banner = () => {
             </div>
             {/* form container */}
             <div data-aos="zoom-in" data-aos-duration="2000" className="max-w-7xl  z-10   absolute -bottom-[57vh] md:-bottom-[5vh] md:bg-white h-fit xl:w-[90%] lg:w-[90%] md:w-[95%] md:mx-auto w-full">
-                <form onSubmit={handleForm} className="p-5 pt-14 md:pt-0 shadow-lg  w-[92%] bg-white dark:bg-black mx-auto md:w-full">
+                <form onSubmit={handleForm} className="p-5 pt-14 md:pt-0 shadow-lg  w-[92%] bg-white dark:bg-slate-800 mx-auto md:w-full">
                     <div className="md:flex gap-3 justify-center items-end md:h-24 lg:h-28 pb-6">
                         <div className="mb-5 md:mb-0">
                             <span>From</span>

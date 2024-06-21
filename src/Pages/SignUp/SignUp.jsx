@@ -23,7 +23,7 @@ const SignUp = () => {
     } = useForm();
 
     const handleFormSubmit = async (data) => {
-        console.log(data);
+        // console.log(data);
         const name = data.name;
         const email = data.email;
         const password = data.password;
@@ -65,7 +65,7 @@ const SignUp = () => {
         <div className="hero min-h-screen pt-8  dark:bg-black dark:text-slate-300  bg-base-200">
             <Tittle title='stay-nest/sign-up' />
             <div className="md:hero-content w-full flex-col">
-                <div className="card  dark:bg-black dark:text-slate-300 flex-shrink-0 w-[97%] mx-auto  md:w-[500px] h-fit shadow-2xl bg-base-100">
+                <div className="card  dark:bg-slate-800 dark:text-slate-300 flex-shrink-0 w-[97%] mx-auto  md:w-[500px] h-fit shadow-xl bg-base-100">
                     <h1 className="text-5xl font-bold text-center text-[#0cc4b0] pt-10">Sign Up </h1>
                     <form className="card-body w-full" onSubmit={handleSubmit(handleFormSubmit)}>
                         <SocialLogin></SocialLogin>
@@ -75,13 +75,13 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" {...register("name", { required: true })} placeholder="Enter Your Name" className="input input-bordered" required />
+                            <input type="text"  {...register("name", { required: true })} placeholder="Enter Your Name" className="dark:bg-slate-700 input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" {...register("email", { required: true })} placeholder="Enter Your Email" className="input input-bordered" required />
+                            <input type="email" {...register("email", { required: true })} placeholder="Enter Your Email" className="dark:bg-slate-700 input input-bordered" required />
                         </div>
 
                         {/* photo uploading */}
@@ -89,7 +89,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Your Photo</span>
                             </label>
-                            <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full " />
+                            <input type="file" {...register("image", { required: true })} className="dark:bg-slate-700 file-input file-input-bordered w-full " />
                         </div>
 
 
@@ -99,7 +99,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" {...register("password", { required: true })} placeholder="Enter Your Password" className="input input-bordered" required />
+                            <input type="password" {...register("password", { required: true })} placeholder="Enter Your Password" className="dark:bg-slate-700 input input-bordered" required />
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>

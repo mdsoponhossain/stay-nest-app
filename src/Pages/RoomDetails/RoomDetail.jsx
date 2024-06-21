@@ -124,9 +124,9 @@ const RoomDetail = () => {
     return (
         <section className="dark:bg-black">
             {/* banner section */}
-            <div className="hero h-[400px]  relative dark:bg-black " style={{ backgroundImage: 'url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/168219422.jpg?k=f9c362f82ac119dd98e4723727e524d18f1af22c3c65fde44c455f961ffaf58d&o=&hp=1)' }}>
+            <div className="hero h-[50vh]  relative dark:bg-black " style={{ backgroundImage: 'url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/168219422.jpg?k=f9c362f82ac119dd98e4723727e524d18f1af22c3c65fde44c455f961ffaf58d&o=&hp=1)' }}>
                 <div className="hero-overlay bg-black bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content absolute top-24 md:top-20 ">
+                <div className="hero-content text-center text-neutral-content absolute  ">
                     <div className="max-w-5xl ">
                         <h3 className=' text-2xl md:text-4xl lg:text-5xl font-serif font-bold my-3' >Welcome to StayNest Hotel</h3>
                         <span className="text-white flex gap-3 justify-center items-center"><Link to='/'>Home</Link> <span><IoIosArrowForward></IoIosArrowForward></span> <Link to='/rooms'>Rooms</Link> <span><IoIosArrowForward></IoIosArrowForward></span> <span>{title}</span> </span>
@@ -134,7 +134,7 @@ const RoomDetail = () => {
                 </div>
 
 
-                    <Link className="absolute bottom-20 border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold text-white hover:bg-white hover:text-[#079988]" to={-1}>GO BACK</Link>
+                    <Link className="absolute bottom-[5vh] border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold text-white hover:bg-white hover:text-[#079988]" to={-1}>GO BACK</Link>
 
             </div>
 

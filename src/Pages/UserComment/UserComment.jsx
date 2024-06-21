@@ -63,26 +63,26 @@ const UserComment = () => {
             <Tittle title='stay-nest/client-review' />
             <div className="hero-content flex-col  ">
 
-                <div className="card flex-shrink-0 dark:bg-slate-700 dark:text-white md:w-[400px] h-fit shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 dark:bg-slate-800 dark:text-white md:w-[400px] h-fit shadow-2xl bg-base-100">
                     <h1 className="text-3xl font-bold text-center text-[#0cc4b0] pt-10">Client Feedback </h1>
                     <form className="card-body" onSubmit={feedbackFormHandle}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name="name" placeholder="Enter Your Name" className="input input-bordered dark:bg-slate-500 " required />
+                            <input type="text" name="name" placeholder="Enter Your Name" className="input input-bordered dark:bg-slate-700 " required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="Enter Your Email" className="input input-bordered dark:bg-slate-500" required />
+                            <input type="email" name="email" placeholder="Enter Your Email" className="input input-bordered dark:bg-slate-700" required />
                         </div>
                         <div className="form-control ">
                             <label className="label">
                                 <span className="label-text">Rating(out of 5)</span>
                             </label>
-                            <select className="border h-12 rounded-lg dark:bg-slate-500" name="type" id="type" onChange={hanldeRating} >
+                            <select className="border h-12 rounded-lg dark:bg-slate-700" name="type" id="type" onChange={hanldeRating} >
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -95,7 +95,7 @@ const UserComment = () => {
                             <label className="label">
                                 <span className="label-text">Comment</span>
                             </label>
-                            <input type="text" name="comment" placeholder="Enter Your Comment" className="input input-bordered dark:bg-slate-500 dark:text-white" />
+                            <input type="text" name="comment" placeholder="Enter Your Comment" className="input input-bordered dark:bg-slate-700 dark:text-white" />
 
                         </div>
                         <div className="form-control mt-6">

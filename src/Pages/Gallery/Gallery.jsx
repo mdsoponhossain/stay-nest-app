@@ -9,9 +9,9 @@ const Gallery = () => {
             <Tittle title='stay-nest/gallery' />
 
             {/* banner section */}
-            <div className="hero h-[300px]  mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://i.ibb.co/m52hTyW/hotel-1.jpg)' }}>
+            <div className="hero h-[50vh]  mb-16 md:mb-0 relative dark:bg-black " style={{ backgroundImage: 'url(https://i.ibb.co/m52hTyW/hotel-1.jpg)' }}>
                 <div className="hero-overlay bg-black bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content absolute top-28 md:top-20 ">
+                <div className="hero-content text-center text-neutral-content absolute  top-[20vh] ">
                     <div className="max-w-5xl ">
                         <h3 className=' text-2xl md:text-4xl lg:text-5xl font-serif font-bold my-3' >Gallery</h3>
                         <span className="text-white flex gap-3 justify-center items-center"><Link to='/'>Home</Link> <span><IoIosArrowForward></IoIosArrowForward></span> <Link to='/gallery'>Gallery</Link></span>

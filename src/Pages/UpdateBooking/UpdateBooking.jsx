@@ -56,11 +56,11 @@ const UpdateBooking = () => {
             <div className="hero-content flex-col ">
 
                 <div className="card flex-shrink-0 w-[100%]  md:w-[400px] h-fit shadow-2xl bg-base-100">
-                    <h1 className="text-3xl dark:bg-slate-700 dark:text-white px-3 font-bold text-center text-[#0cc4b0] pt-10">Update booking date </h1>
-                    <form onSubmit={handleFormSubmit} className="card-body dark:bg-slate-700 dark:text-white ">
+                    <h1 className="text-3xl dark:bg-slate-800 dark:text-white px-3 font-bold text-center text-[#0cc4b0] pt-10">Update booking date </h1>
+                    <form onSubmit={handleFormSubmit} className="card-body dark:bg-slate-800 dark:text-white ">
 
 
-                        <input onChange={handleDate} placeholder="Select Date" className="w-full border dark:bg-slate-400 h-16" type="date" name="" id="" required />
+                        <input onChange={handleDate} placeholder="Select Date" className="dark:bg-slate-700 w-full border dark:border-0  h-16" type="date" name="" id="" required />
 
 
 
