@@ -5,7 +5,7 @@ import { ImSpoonKnife } from "react-icons/im";
 import { TbGlass } from "react-icons/tb";
 import { FaSwimmer } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
-
+import { Pannellum } from "pannellum-react";
 
 const Room = ({ room }) => {
     // console.log(room)
@@ -15,15 +15,37 @@ const Room = ({ room }) => {
 
     return (
         <>
-            <div id="card" className="relative h-[550px] dark:bg-slate-700 dark:text-white  md:w-[370px] lg:w-96 bg-base-100 shadow-lg mt-5 ">
-                <FaArrowRightLong className="arrow   absolute top-28 left-40 text-xl text-white z-30"></FaArrowRightLong>
-                <Link to={`/RoomDetails/${_id}`}>
-                    <div className="absolute bg-black w-full border-2 border-red-700 h-[250px] opacity-0 hover:opacity-30"></div>
-                    <figure>
-                        <img className='h-[250px] w-full ' src={image} alt="Shoes" />
-                    </figure>
-                </Link>
-                <div className="p-3">
+            <div id="card" className="relative  h-[550px] dark:bg-slate-700 dark:text-white  md:w-[370px] lg:w-96 bg-base-100 shadow-lg mt-5 ">
+                <div className="absolute bg-black w-full border-2 border-red-700 h-[250px] opacity-0 hover:opacity-30"></div>
+                <div className="App">
+                    <Pannellum
+                        width="100%"
+                        height="250px"
+                        image={image}
+                        pitch={-50}
+                        yaw={180}
+                        hfov={110}
+                        autoLoad
+                        autoRotate={3}
+                        showZoomCtrl={false}
+                        keyboardZoom={false}
+                        mouseZoom={false}
+                        showFullscreenCtrl={false}
+                        compass={true}
+                        onLoad={() => {
+                            console.log("panorama loaded");
+                        }}
+                    >
+                        <Pannellum.Hotspot
+                            type="custom"
+                            pitch={31}
+                            yaw={150}
+                            handleClick={(evt, name) => console.log(name)}
+                            name="hs1"
+                        />
+                    </Pannellum>
+                </div>
+                <div className="px-3">
                     <h2 className="text-3xl font-bold ">{title}</h2>
                     <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>
                     <p className='flex gap-10 mt-4'>
@@ -34,7 +56,12 @@ const Room = ({ room }) => {
                     </p>
                     <div className="border border-slate-300 my-8"></div>
 
-                    <p className='text-xl font-semibold text-slate-500 dark:text-white'>Price : <span className='text-3xl  font-bold'>${price}</span> / night</p>
+                    <div className="flex justify-between items-center">
+                        <p className='text-xl font-semibold text-slate-500 dark:text-white'>Price : <span className='text-3xl  font-bold'>${price}</span> / night</p>
+                        <Link to={`/RoomDetails/${_id}`}>
+                            <div className="py-2 px-4 md:py-3 md:px-5 bg-[#0cd4bd] rounded-sm md:rounded-md hover:bg-[#09ad9b] text-white">Details</div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>

@@ -55,7 +55,7 @@ const Rooms = () => {
 
 
     return (
-        <section className="dark:bg-black">
+        <section className="dark:bg-black px-1">
             {/* banner section */}
             <div className="hero h-[50vh]  mb-16 md:mb-0 relative " style={{ backgroundImage: 'url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/437375235.jpg?k=8ee74cdd790c4d99cc1617526767d5dc758cfc05088a3e618e3019d177a5e17a&o=&hp=1)' }}>
                 <div className="hero-overlay bg-black bg-opacity-60"></div>
