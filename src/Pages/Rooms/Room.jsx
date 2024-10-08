@@ -4,8 +4,8 @@ import { FaWifi } from "react-icons/fa6";
 import { ImSpoonKnife } from "react-icons/im";
 import { TbGlass } from "react-icons/tb";
 import { FaSwimmer } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Pannellum } from "pannellum-react";
+import ThreeSixtyImage from "../../SharedComponent/ThreeSixtyImage";
+
 
 const Room = ({ room }) => {
     // console.log(room)
@@ -17,34 +17,7 @@ const Room = ({ room }) => {
         <>
             <div id="card" className="relative  h-[550px] dark:bg-slate-700 dark:text-white  md:w-[370px] lg:w-96 bg-base-100 shadow-lg mt-5 ">
                 <div className="absolute bg-black w-full border-2 border-red-700 h-[250px] opacity-0 hover:opacity-30"></div>
-                <div className="App">
-                    <Pannellum
-                        width="100%"
-                        height="250px"
-                        image={image}
-                        pitch={-50}
-                        yaw={180}
-                        hfov={110}
-                        autoLoad
-                        autoRotate={3}
-                        showZoomCtrl={false}
-                        keyboardZoom={false}
-                        mouseZoom={false}
-                        showFullscreenCtrl={false}
-                        compass={true}
-                        onLoad={() => {
-                            console.log("panorama loaded");
-                        }}
-                    >
-                        <Pannellum.Hotspot
-                            type="custom"
-                            pitch={31}
-                            yaw={150}
-                            handleClick={(evt, name) => console.log(name)}
-                            name="hs1"
-                        />
-                    </Pannellum>
-                </div>
+                <ThreeSixtyImage height={'250px'} compass={true} image={image}></ThreeSixtyImage>
                 <div className="px-3">
                     <h2 className="text-3xl font-bold ">{title}</h2>
                     <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>

@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FaWifi} from "react-icons/fa6";
+import { FaWifi } from "react-icons/fa6";
 import { ImSpoonKnife } from "react-icons/im";
 import { TbGlass } from "react-icons/tb";
 import { PiTelevisionSimpleBold } from "react-icons/pi";
@@ -17,6 +17,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { useEffect } from 'react';
 import Aos from 'aos';
+import ThreeSixtyImage from '../../SharedComponent/ThreeSixtyImage';
 const HotelRooms = () => {
     useEffect(() => {
         Aos.init();
@@ -53,7 +54,7 @@ const HotelRooms = () => {
                     {/* slide one */}
                     <SwiperSlide >
                         <div id='card' className=" dark:bg-slate-700 dark:text-white h-[550px] dark:border-0 border-b-2   md:w-[370px] lg:w-96 bg-base-100 shadow-xl ">
-                            <figure><img className='w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vav0Sl_Uek-UXBTvSBy1dtI2j06BXMLL8RzUJRtjFA&s" alt="Shoes" /></figure>
+                            <ThreeSixtyImage height={'250px'} compass={false} image={"https://thumbs.dreamstime.com/b/minsk-belarus-march-full-spherical-degrees-angle-view-seamless-panorama-interior-vip-guest-room-loft-apartment-hotel-147704139.jpg"}></ThreeSixtyImage>
                             <div className="p-3">
                                 <h2 className="text-3xl font-bold ">Family Room 3</h2>
                                 <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>
@@ -71,10 +72,10 @@ const HotelRooms = () => {
                     </SwiperSlide>
 
                     {/* slide two */}
-                  
+
                     <SwiperSlide >
                         <div id='card' className=" dark:bg-slate-700 dark:text-white h-[550px] dark:border-0 border-b-2   md:w-[370px] lg:w-96 bg-base-100 shadow-xl ">
-                            <figure><img className='w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vav0Sl_Uek-UXBTvSBy1dtI2j06BXMLL8RzUJRtjFA&s" alt="Shoes" /></figure>
+                            <ThreeSixtyImage height={'250px'} compass={false} image={"https://t3.ftcdn.net/jpg/02/07/98/18/360_F_207981894_D4lGdWrSsYwdk8wSZfv3M56W5V4Z5ck8.jpg"}></ThreeSixtyImage>
                             <div className="p-3">
                                 <h2 className="text-3xl font-bold ">Family Room 3</h2>
                                 <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>
@@ -93,7 +94,7 @@ const HotelRooms = () => {
 
                     <SwiperSlide >
                         <div id='card' className=" dark:bg-slate-700 dark:text-white h-[550px] dark:border-0 border-b-2   md:w-[370px] lg:w-96 bg-base-100 shadow-xl ">
-                            <figure><img className='w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vav0Sl_Uek-UXBTvSBy1dtI2j06BXMLL8RzUJRtjFA&s" alt="Shoes" /></figure>
+                            <ThreeSixtyImage height={'250px'} compass={false} image={"https://www.shutterstock.com/image-illustration/360-degrees-bedroom-3d-rendering-600nw-2286195827.jpg"}></ThreeSixtyImage>
                             <div className="p-3">
                                 <h2 className="text-3xl font-bold ">Family Room 3</h2>
                                 <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>
@@ -112,7 +113,7 @@ const HotelRooms = () => {
 
                     <SwiperSlide >
                         <div id='card' className=" dark:bg-slate-700 dark:text-white h-[550px] dark:border-0 border-b-2   md:w-[370px] lg:w-96 bg-base-100 shadow-xl ">
-                            <figure><img className='w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vav0Sl_Uek-UXBTvSBy1dtI2j06BXMLL8RzUJRtjFA&s" alt="Shoes" /></figure>
+                            <ThreeSixtyImage height={'250px'} compass={false} image={"https://media-cdn.tripadvisor.com/media/photo-s/0d/ac/50/7b/360-degree-view-flattened.jpg"}></ThreeSixtyImage>
                             <div className="p-3">
                                 <h2 className="text-3xl font-bold ">Family Room 3</h2>
                                 <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>
@@ -128,11 +129,6 @@ const HotelRooms = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-
-
-                    
-
-
                 </Swiper>
             </section>
         </div>

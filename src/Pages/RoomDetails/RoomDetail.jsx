@@ -1,10 +1,11 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaStar } from 'react-icons/fa'
 import { IoIosArrowForward } from "react-icons/io";
 import { useForm } from "react-hook-form"
+import ThreeSixtyImage from "../../SharedComponent/ThreeSixtyImage";
 
 
 const RoomDetail = () => {
@@ -23,9 +24,9 @@ const RoomDetail = () => {
         data.seat = seat
         const userBookingInfo = { ...data, price, title, roomSize, bookStatus: 'booked', room_number, image };
         const updateRoomInfo = { seat: 1 };
-        fetch('https://stay-nest-server-side.vercel.app/my-bookings',{
+        fetch('https://stay-nest-server-side.vercel.app/my-bookings', {
             method: 'POST',
-            credentials:'include',
+            credentials: 'include',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(userBookingInfo)
         })
@@ -33,7 +34,7 @@ const RoomDetail = () => {
             .then(data => {
                 if (data?.insertedId) {
 
-                    fetch(`https://stay-nest-server-side.vercel.app/rooms-update/${_id}`,{
+                    fetch(`https://stay-nest-server-side.vercel.app/rooms-update/${_id}`, {
                         method: 'PATCH',
                         credentials: 'include',
                         headers: { 'content-type': 'application/json' },
@@ -86,11 +87,11 @@ const RoomDetail = () => {
         const childrens = e.target.children.value;
         const registationInfo = {
             arrival, departure, adults, childrens, user: user?.email, id: _id,
-            image, balcony, seat, price, title,roomSize
+            image, balcony, seat, price, title, roomSize
         }
-        fetch('https://stay-nest-server-side.vercel.app/room-regitering',{
+        fetch('https://stay-nest-server-side.vercel.app/room-regitering', {
             method: 'POST',
-            credentials:'include',
+            credentials: 'include',
             headers: {
                 'content-type': 'application/json',
             },
@@ -134,7 +135,7 @@ const RoomDetail = () => {
                 </div>
 
 
-                    <Link className="absolute bottom-[5vh] border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold text-white hover:bg-white hover:text-[#079988]" to={-1}>GO BACK</Link>
+                <Link className="absolute bottom-[5vh] border mt-4 md:mt-10 border-white py-2 px-3 md:py-3 md:px-6 font-semibold md:font-bold text-white hover:bg-white hover:text-[#079988]" to={-1}>GO BACK</Link>
 
             </div>
 
@@ -215,7 +216,7 @@ const RoomDetail = () => {
                             <p>Price : <span className="primary-color md:text-3xl font-semibold">${price}</span> <span className="font-bold">/ night</span></p>
                         </div>
                     </div>
-                    <figure><img className="w-full" src={image} alt={room_number} /></figure>
+                    <ThreeSixtyImage height={'550px'} compass={true} image={image}></ThreeSixtyImage>
 
 
                     <div className="mt-10">
