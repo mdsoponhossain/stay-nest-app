@@ -16,7 +16,7 @@ const MyBookings = () => {
 
 
     useEffect(() => {
-        axiosSecure.get(`https://stay-nest-server-side.vercel.app/my-bookings/${userEmail}`)
+        axiosSecure.get(`https://hotel-management-app-server.vercel.app/my-bookings/${userEmail}`)
             .then(res => {
                 setBookings(res?.data)
             })
@@ -39,7 +39,7 @@ const MyBookings = () => {
                 confirmButtonText: "confirm"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`https://stay-nest-server-side.vercel.app/booking-delete/${_id}`, {
+                    fetch(`https://hotel-management-app-server.vercel.app/booking-delete/${_id}`, {
                         method: 'DELETE',
                         credentials:'include',
                     })
@@ -49,7 +49,7 @@ const MyBookings = () => {
                             setBookings(remaining)
                         })
                     const updateRoomInfo = { seat: 1 }
-                    fetch(`https://stay-nest-server-side.vercel.app/rooms-upadate-seat/${id}`, {
+                    fetch(`https://hotel-management-app-server.vercel.app/rooms-upadate-seat/${id}`, {
                         method: 'PATCH',
                         credentials:'include',
                         headers: { 'content-type': 'application/json' },

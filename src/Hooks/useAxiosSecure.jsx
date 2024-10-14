@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const axiosSecure = axios.create({ baseURL: 'https://stay-nest-server-side.vercel.app', withCredentials: true })
+const axiosSecure = axios.create({ baseURL: 'https://hotel-management-app-server.vercel.app', withCredentials: true })
 
 
 const useAxiosSecure = () => {

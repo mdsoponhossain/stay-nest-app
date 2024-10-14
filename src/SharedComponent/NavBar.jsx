@@ -60,7 +60,7 @@ const NavBar = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                axios.post('https://stay-nest-server-side.vercel.app/clear-token', userInfo, { withCredentials: true })
+                axios.post('https://hotel-management-app-server.vercel.app/clear-token', userInfo, { withCredentials: true })
                     .then(() => {
                     })
             })

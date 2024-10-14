@@ -91,11 +91,11 @@ const AuthProvider = ({ children }) => {
             const email = currentUser?.email;
             const userInfo = { email }
             if (currentUser) {
-                axios.post('https://stay-nest-server-side.vercel.app/access-token', userInfo, { withCredentials: true })
+                axios.post('https://hotel-management-app-server.vercel.app/access-token', userInfo, { withCredentials: true })
                     .then(() => {
                     })
             } else {
-                axios.post('https://stay-nest-server-side.vercel.app/clear-token', userInfo, { withCredentials: true })
+                axios.post('https://hotel-management-app-server.vercel.app/clear-token', userInfo, { withCredentials: true })
                     .then(() => {
                     })
             }

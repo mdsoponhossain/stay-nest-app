@@ -35,12 +35,12 @@ import MyRegister from "../Pages/myRegister/MyRegister";
         {
           path:'/Rooms',
           element:<Rooms></Rooms>,
-          loader:()=>fetch('https://stay-nest-server-side.vercel.app/roomsCount')
+          loader:()=>fetch('https://hotel-management-app-server.vercel.app/roomsCount')
         },
         {
           path:'/RoomDetails/:id',
           element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
-          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`,{credentials:'include'})
+          loader:({params})=>fetch(`https://hotel-management-app-server.vercel.app/rooms/${params.id}`,{credentials:'include'})
         },
         {
           path:'/login',
@@ -57,7 +57,7 @@ import MyRegister from "../Pages/myRegister/MyRegister";
         {
           path:'/user-comment/:id',
           element:<UserComment></UserComment>,
-          loader:({params})=>fetch(`https://stay-nest-server-side.vercel.app/rooms/${params.id}`,{credentials:'include'})
+          loader:({params})=>fetch(`https://hotel-management-app-server.vercel.app/rooms/${params.id}`,{credentials:'include'})
         },
         {
           path:'/gallery',
@@ -66,7 +66,7 @@ import MyRegister from "../Pages/myRegister/MyRegister";
             {
               path: '',
               element: <AllGalleryItems></AllGalleryItems>,
-              loader:()=>fetch('https://stay-nest-server-side.vercel.app/rooms')
+              loader:()=>fetch('https://hotel-management-app-server.vercel.app/rooms')
             },
             {
               path:'rooms',
@@ -85,7 +85,7 @@ import MyRegister from "../Pages/myRegister/MyRegister";
         {
           path:'/about-us',
           element:<AboutUs></AboutUs>,
-          loader:()=>fetch('https://stay-nest-server-side.vercel.app/about-us')
+          loader:()=>fetch('https://hotel-management-app-server.vercel.app/about-us')
 
         },
         {

@@ -13,7 +13,7 @@ const Rooms = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(9);
     useEffect(() => {
-        fetch(`https://stay-nest-server-side.vercel.app/rooms?sortField=price&sortOrder=${sort}&currentPage=${currentPage}&itemsPerPage=${itemsPerPage}`)
+        fetch(`https://hotel-management-app-server.vercel.app/rooms?sortField=price&sortOrder=${sort}&currentPage=${currentPage}&itemsPerPage=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setRooms(data)
@@ -100,5 +100,7 @@ const Rooms = () => {
         </section>
     );
 };
+
+
 
 export default Rooms;

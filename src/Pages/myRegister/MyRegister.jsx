@@ -30,7 +30,7 @@ const MyRegister = () => {
             confirmButtonText: "confirm"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://stay-nest-server-side.vercel.app/registation-delete/${_id}`, {
+                fetch(`https://hotel-management-app-server.vercel.app/registation-delete/${_id}`, {
                     method: 'DELETE',
                     credentials: 'include'
                 })

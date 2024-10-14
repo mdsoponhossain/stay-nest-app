@@ -18,7 +18,7 @@ const UpdateBooking = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const updateDate = { date }
-        fetch(`https://stay-nest-server-side.vercel.app/update-date/${id}`, {
+        fetch(`https://hotel-management-app-server.vercel.app/update-date/${id}`, {
             method: 'PATCH',
             credentials:'include',
             headers: { 'content-type': 'application/json' },

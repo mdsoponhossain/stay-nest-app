@@ -30,7 +30,7 @@ const UserComment = () => {
 
 
         const updateRoomInfo = { userFeedback }
-        fetch(`https://stay-nest-server-side.vercel.app/client-review/${_id}`, {
+        fetch(`https://hotel-management-app-server.vercel.app/client-review/${_id}`, {
             credentials: 'include',
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },

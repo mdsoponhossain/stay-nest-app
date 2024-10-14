@@ -54,7 +54,7 @@ const HotelRooms = () => {
                     {/* slide one */}
                     <SwiperSlide >
                         <div id='card' className=" dark:bg-slate-700 dark:text-white h-[550px] dark:border-0 border-b-2   md:w-[370px] lg:w-96 bg-base-100 shadow-xl ">
-                            <ThreeSixtyImage height={'250px'} compass={false} image={"https://thumbs.dreamstime.com/b/minsk-belarus-march-full-spherical-degrees-angle-view-seamless-panorama-interior-vip-guest-room-loft-apartment-hotel-147704139.jpg"}></ThreeSixtyImage>
+                            <ThreeSixtyImage height={'250px'} compass={false} image={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7KL3_FEYtylyHRVPJWksFryq7-U25jfTow&s"}></ThreeSixtyImage>
                             <div className="p-3">
                                 <h2 className="text-3xl font-bold ">Family Room 3</h2>
                                 <p className='my-6'>Make yourself comfortable in any of our serene guest rooms and spacious suites...</p>
